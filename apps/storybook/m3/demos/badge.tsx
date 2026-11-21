@@ -1,4 +1,4 @@
-import { Badge, BadgeAnchor } from "@solid-kit/kit-1.9/m3";
+import { Badge, BadgeAnchor } from "@solidx/kit-1.9/m3";
 import { DemoRow, DemoStack, MailIcon } from "./shared";
 
 export function BadgeDemo() {

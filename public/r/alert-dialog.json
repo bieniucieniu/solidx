@@ -4,7 +4,7 @@
   "title": "Alert Dialog",
   "description": "Alert Dialog. Styled wrapper around @corvu/dialog with role=\"alertdialog\".",
   "dependencies": ["@corvu/dialog"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/button"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/button"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/alert-dialog.tsx",

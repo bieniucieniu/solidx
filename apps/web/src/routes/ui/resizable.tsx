@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ResizableDemo } from "~/demos/ui/resizable";
 import source from "~/demos/ui/resizable.tsx?raw";
 
-const snippet = `import { Resizable, ResizableHandle, ResizablePanel } from "@solid-kit/kit/ui";
+const snippet = `import { Resizable, ResizableHandle, ResizablePanel } from "@solidx/kit/ui";
 
 // Sizes are percentages of the space the panels share.
 <Resizable class="h-64 rounded-lg border">

@@ -13,7 +13,7 @@ import {
   ListItemContent,
   ListItemHeadline,
   ListItemLeading,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { For } from "solid-js";
 import { MailIcon, PersonIcon, ShareIcon } from "./shared";
 

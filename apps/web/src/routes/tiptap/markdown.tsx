@@ -6,7 +6,7 @@ const MarkdownEditor = clientOnly(() => import("~/demos/tiptap/markdown"));
 
 const snippet = `import StarterKit from "@tiptap/starter-kit";
 import { Markdown } from "tiptap-markdown";
-import { Tiptap, useEditor } from "@solid-kit/kit/tiptap";
+import { Tiptap, useEditor } from "@solidx/kit/tiptap";
 
 const editor = useEditor(() => ({
   extensions: [StarterKit, Markdown],

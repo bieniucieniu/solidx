@@ -4,7 +4,7 @@
   "name": "m3",
   "title": "M3 init",
   "description": "shadcn init for a Solid + Tailwind CSS 4 app: writes components.json, adds cn and the M3 theme. Skips the default React style.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/m3-theme"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/m3-theme"],
   "type": "registry:base",
   "config": {
     "style": "base",

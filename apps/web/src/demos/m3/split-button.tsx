@@ -7,7 +7,7 @@ import {
   SplitButtonAction,
   SplitButtonTrigger,
   type SplitButtonVariant,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { For } from "solid-js";
 import { DemoRow, DemoStack, SendIcon } from "./shared";
 

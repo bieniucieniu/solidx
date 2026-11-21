@@ -1,14 +1,14 @@
-# `@solid-kit/kit-1.9`
+# `@solidx/kit-1.9`
 
-The Solid 1.9 code, frozen. Same layout as [`@solid-kit/kit`](../kit) (the Solid 2.0 rewrite): one package, one subpath per area.
+The Solid 1.9 code, frozen. Same layout as [`@solidx/kit`](../kit) (the Solid 2.0 rewrite): one package, one subpath per area.
 
-| Subpath                                                            | Source                                      |                                       |
-| ------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
-| `@solid-kit/kit-1.9/ui`, `/ui/theme.css`                           | `src/components/ui/`, `src/lib/`            | shadcn registry on Kobalte and corvu  |
-| `@solid-kit/kit-1.9/m3`, `/m3/theme.css`, `/m3/tokens.css`         | `src/components/m3/`, `src/lib/m3/`         | Material 3 Expressive registry        |
-| `@solid-kit/kit-1.9/motion`                                        | `src/components/motion/`, `src/lib/motion/` | Motion for Solid                      |
-| `@solid-kit/kit-1.9/xyflow`, `/xyflow/panels`, `/xyflow/style.css` | `src/components/xyflow/`, `src/lib/xyflow/` | node graph editor on `@xyflow/system` |
-| `@solid-kit/kit-1.9/tiptap`, `/tiptap/menus`, `/tiptap/node-view`  | `src/components/tiptap/`, `src/lib/tiptap/` | Tiptap bindings                       |
+| Subpath                                                         | Source                                      |                                       |
+| --------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
+| `@solidx/kit-1.9/ui`, `/ui/theme.css`                           | `src/components/ui/`, `src/lib/`            | shadcn registry on Kobalte and corvu  |
+| `@solidx/kit-1.9/m3`, `/m3/theme.css`, `/m3/tokens.css`         | `src/components/m3/`, `src/lib/m3/`         | Material 3 Expressive registry        |
+| `@solidx/kit-1.9/motion`                                        | `src/components/motion/`, `src/lib/motion/` | Motion for Solid                      |
+| `@solidx/kit-1.9/xyflow`, `/xyflow/panels`, `/xyflow/style.css` | `src/components/xyflow/`, `src/lib/xyflow/` | node graph editor on `@xyflow/system` |
+| `@solidx/kit-1.9/tiptap`, `/tiptap/menus`, `/tiptap/node-view`  | `src/components/tiptap/`, `src/lib/tiptap/` | Tiptap bindings                       |
 
 ui and m3 import `@/lib/…`: the shadcn CLI rewrites that alias when it installs an item, so a consumer of the package source (Storybook) needs an `@` alias to `src`. motion, xyflow, and tiptap import `#/…` through `package.json` `imports`. Registry items for ui and m3 are in the root [`registry.json`](../../registry.json); motion, xyflow, and tiptap are in [`registry.json`](registry.json) here.
 
@@ -23,11 +23,11 @@ Install into an app. Do not import this package as a component library. The CLI 
 From a project that already has `components.json` (see below):
 
 ```bash
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/theme
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/button
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/dialog
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/tooltip
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/checkbox
+pnpm dlx shadcn@latest add bieniucieniu/solidx/theme
+pnpm dlx shadcn@latest add bieniucieniu/solidx/button
+pnpm dlx shadcn@latest add bieniucieniu/solidx/dialog
+pnpm dlx shadcn@latest add bieniucieniu/solidx/tooltip
+pnpm dlx shadcn@latest add bieniucieniu/solidx/checkbox
 ```
 
 `utils` (`cn`) installs with the components. Add `theme` once. Later component installs do not write color tokens again.
@@ -57,7 +57,7 @@ pnpm dlx shadcn@latest add bieniucieniu/solid-kit/checkbox
 }
 ```
 
-`src/index.css` must start with `@import "tailwindcss";`. Set `tailwind.css` to that file. `shadcn add bieniucieniu/solid-kit/theme` merges the variables and the `.dark` variant into it.
+`src/index.css` must start with `@import "tailwindcss";`. Set `tailwind.css` to that file. `shadcn add bieniucieniu/solidx/theme` merges the variables and the `.dark` variant into it.
 
 ### Theming
 
@@ -183,12 +183,12 @@ Install into an app. The CLI copies the source and rewrites `@/lib/utils`.
 In a Vite app with Tailwind CSS 4 (`src/index.css` starts with `@import "tailwindcss";`) and an `@/*` path alias:
 
 ```bash
-pnpm dlx shadcn@latest init bieniucieniu/solid-kit/m3
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/m3-button
-pnpm dlx shadcn@latest add bieniucieniu/solid-kit/m3-dialog
+pnpm dlx shadcn@latest init bieniucieniu/solidx/m3
+pnpm dlx shadcn@latest add bieniucieniu/solidx/m3-button
+pnpm dlx shadcn@latest add bieniucieniu/solidx/m3-dialog
 ```
 
-`init` with `m3` writes `components.json`, adds `utils` and `m3-theme`, and skips shadcn's default React style. It stops if `components.json` already exists. In that case, or where `init` finds no supported framework, set up `components.json` as in the [`ui` install section](#install) and run `shadcn add bieniucieniu/solid-kit/m3-theme` instead.
+`init` with `m3` writes `components.json`, adds `utils` and `m3-theme`, and skips shadcn's default React style. It stops if `components.json` already exists. In that case, or where `init` finds no supported framework, set up `components.json` as in the [`ui` install section](#install) and run `shadcn add bieniucieniu/solidx/m3-theme` instead.
 
 Items are named `m3-<component>` and install into `components/m3/`, so they can sit next to `ui` components. Each one pulls in `utils`. The theme installs once, at init. Later component installs do not touch the tokens, so tuned values in `m3-tokens.css` and `src/index.css` stay.
 
@@ -197,7 +197,7 @@ Items are named `m3-<component>` and install into `components/m3/`, so they can 
 Inside this repo, import the package directly:
 
 ```css
-@import "@solid-kit/kit-1.9/m3/theme.css"; /* tailwindcss + tw-animate-css + tokens */
+@import "@solidx/kit-1.9/m3/theme.css"; /* tailwindcss + tw-animate-css + tokens */
 ```
 
 ### Tokens
@@ -218,7 +218,7 @@ Type styles are `typescale-*` rather than `text-*`: `tailwind-merge` reads an un
 
 ### Next to a shadcn theme
 
-`bg-primary` and `bg-secondary` read `--primary` / `--secondary`, the same variables shadcn uses. When an app also loads the `ui` theme (like this repo's web app and Storybook), import `@solid-kit/kit-1.9/m3/tokens.css` instead of `theme.css` and put `data-m3` on the M3 part of the page. While an element with `data-m3` is mounted, `:root:has([data-m3])` points the two variables at M3, so portals (dialogs, menus, tooltips) follow too.
+`bg-primary` and `bg-secondary` read `--primary` / `--secondary`, the same variables shadcn uses. When an app also loads the `ui` theme (like this repo's web app and Storybook), import `@solidx/kit-1.9/m3/tokens.css` instead of `theme.css` and put `data-m3` on the M3 part of the page. While an element with `data-m3` is mounted, `:root:has([data-m3])` points the two variables at M3, so portals (dialogs, menus, tooltips) follow too.
 
 ### Dynamic color
 

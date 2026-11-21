@@ -4,7 +4,7 @@
   "title": "XYFlow Panels",
   "description": "Background and controls.",
   "dependencies": ["solid-js@^1.9.0"],
-  "registryDependencies": ["bieniucieniu/solid-kit/xyflow"],
+  "registryDependencies": ["bieniucieniu/solidx/xyflow"],
   "files": [
     {
       "path": "packages/1.9/src/components/xyflow/panels.ts",

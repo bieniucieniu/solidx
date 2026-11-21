@@ -1,4 +1,4 @@
-import { RadioGroup, RadioGroupItem, RadioGroupItemLabel } from "@solid-kit/kit/ui";
+import { RadioGroup, RadioGroupItem, RadioGroupItemLabel } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function RadioGroupDemo() {

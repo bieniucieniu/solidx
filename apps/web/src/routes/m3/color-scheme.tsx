@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ColorSchemeDemo } from "~/demos/m3/color-scheme";
 import source from "~/demos/m3/color-scheme.tsx?raw";
 
-const snippet = `import { applyScheme, createScheme, schemeCss } from "@solid-kit/kit/m3";
+const snippet = `import { applyScheme, createScheme, schemeCss } from "@solidx/kit/m3";
 
 // Apply to the page (or any [data-m3] element). Resolves to a cleanup function.
 const remove = await applyScheme(document.documentElement, { seed: "#006A6A", dark: false });

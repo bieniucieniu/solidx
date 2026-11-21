@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { AspectRatio } from "@solid-kit/kit-1.9/ui";
+import { AspectRatio } from "@solidx/kit-1.9/ui";
 
 const meta = {
   title: "UI/AspectRatio",

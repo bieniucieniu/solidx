@@ -4,7 +4,7 @@ import source from "~/demos/motion/drag.tsx?raw";
 
 const DragDemo = clientOnly(() => import("~/demos/motion/drag"));
 
-const snippet = `import { motion } from "@solid-kit/kit/motion";
+const snippet = `import { motion } from "@solidx/kit/motion";
 
 <motion.div drag="x" dragConstraints={{ left: 0, right: 160 }} />`;
 

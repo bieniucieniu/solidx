@@ -11,7 +11,7 @@ const snippet = `import {
   DialogLabel,
   DialogOverlay,
   DialogTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Dialog>
   <DialogTrigger class={buttonVariants()}>Open</DialogTrigger>

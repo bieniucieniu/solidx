@@ -9,7 +9,7 @@ import {
   Switch,
   SwitchControl,
   SwitchLabel,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import {
   Flow,
   Handle,
@@ -17,9 +17,9 @@ import {
   createFlow,
   useFlow,
   type NodeComponentProps,
-} from "@solid-kit/kit/xyflow";
-import { Background, Controls } from "@solid-kit/kit/xyflow/panels";
-import "@solid-kit/kit/xyflow/style.css";
+} from "@solidx/kit/xyflow";
+import { Background, Controls } from "@solidx/kit/xyflow/panels";
+import "@solidx/kit/xyflow/style.css";
 
 type TaskData = { title: string; owner: string; done: boolean };
 type ReviewData = { title: string };

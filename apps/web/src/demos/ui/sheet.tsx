@@ -9,7 +9,7 @@ import {
   SheetLabel,
   SheetOverlay,
   SheetTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { For } from "solid-js";
 
 const sides = ["top", "right", "bottom", "left"] as const;

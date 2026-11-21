@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Solid 2.0 (default)
 
-Everything outside `packages/1.9/**` and `apps/storybook` is Solid 2.0. `solid-js` and `@solidjs/web` `^2.0.3`, `jsxImportSource: "@solidjs/web"`. Full rules: root `AGENTS.md` ("Package Development: Solid 2.0") and `packages/kit/AGENTS.md` (ui-sdk wrapping). Never import `react` or `@solid-kit/kit-1.9`.
+Everything outside `packages/1.9/**` and `apps/storybook` is Solid 2.0. `solid-js` and `@solidjs/web` `^2.0.3`, `jsxImportSource: "@solidjs/web"`. Full rules: root `AGENTS.md` ("Package Development: Solid 2.0") and `packages/kit/AGENTS.md` (ui-sdk wrapping). Never import `react` or `@solidx/kit-1.9`.
 
 ## Write
 

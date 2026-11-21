@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ScrollAreaDemo } from "~/demos/ui/scroll-area";
 import source from "~/demos/ui/scroll-area.tsx?raw";
 
-const snippet = `import { ScrollArea } from "@solid-kit/kit/ui";
+const snippet = `import { ScrollArea } from "@solidx/kit/ui";
 
 <ScrollArea class="h-24">
   <p>Line one of a long note.</p>

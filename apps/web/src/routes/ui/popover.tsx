@@ -10,7 +10,7 @@ const snippet = `import {
   PopoverDescription,
   PopoverLabel,
   PopoverTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Popover>
   <PopoverTrigger class={buttonVariants()}>Open</PopoverTrigger>

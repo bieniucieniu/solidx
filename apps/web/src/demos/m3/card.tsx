@@ -10,7 +10,7 @@ import {
   CardTitle,
   type CardVariant,
   IconButton,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { For } from "solid-js";
 import { MoreVertIcon } from "./shared";
 

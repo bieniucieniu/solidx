@@ -1,4 +1,4 @@
-import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@solid-kit/kit/ui";
+import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@solidx/kit/ui";
 
 export function InputOTPDemo() {
   return (

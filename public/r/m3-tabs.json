@@ -4,7 +4,7 @@
   "title": "M3 Tabs",
   "description": "Primary and secondary tabs. Styled wrapper around @kobalte/core/tabs.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/tabs.tsx",

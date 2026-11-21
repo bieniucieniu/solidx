@@ -1,4 +1,4 @@
-import { Switch, SwitchLabel } from "@solid-kit/kit/ui";
+import { Switch, SwitchLabel } from "@solidx/kit/ui";
 import { createSignal, For } from "solid-js";
 import { VariantRow } from "~/components/preview";
 

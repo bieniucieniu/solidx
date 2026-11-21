@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { MenuDemo } from "~/demos/m3/menu";
 import source from "~/demos/m3/menu.tsx?raw";
 
-const snippet = `import { Menu, MenuContent, MenuItem, MenuItemIcon, MenuItemLabel, MenuShortcut, MenuTrigger, buttonVariants } from "@solid-kit/kit/m3";
+const snippet = `import { Menu, MenuContent, MenuItem, MenuItemIcon, MenuItemLabel, MenuShortcut, MenuTrigger, buttonVariants } from "@solidx/kit/m3";
 
 <Menu>
   <MenuTrigger class={buttonVariants()}>Open</MenuTrigger>

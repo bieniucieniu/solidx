@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@solid-kit/kit/m3";
+import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@solidx/kit/m3";
 import { DemoRow, DemoStack, HomeIcon, MailIcon, PersonIcon } from "./shared";
 
 export function TabsDemo() {

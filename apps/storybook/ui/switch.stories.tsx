@@ -1,11 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import {
-  Switch,
-  SwitchControl,
-  SwitchInput,
-  SwitchLabel,
-  SwitchThumb,
-} from "@solid-kit/kit-1.9/ui";
+import { Switch, SwitchControl, SwitchInput, SwitchLabel, SwitchThumb } from "@solidx/kit-1.9/ui";
 import { createSignal } from "solid-js";
 
 const meta = {

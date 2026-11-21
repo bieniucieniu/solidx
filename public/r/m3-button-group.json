@@ -3,7 +3,7 @@
   "name": "m3-button-group",
   "title": "M3 Button group",
   "description": "Standard and connected button groups. Children take the group's size.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/m3-button"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/m3-button"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/button-group.tsx",

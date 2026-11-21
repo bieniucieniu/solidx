@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ToggleGroupDemo } from "~/demos/ui/toggle-group";
 import source from "~/demos/ui/toggle-group.tsx?raw";
 
-const snippet = `import { ToggleGroup, ToggleGroupItem } from "@solid-kit/kit/ui";
+const snippet = `import { ToggleGroup, ToggleGroupItem } from "@solidx/kit/ui";
 
 // variant: "default" | "outline"   size: "sm" | "default" | "lg"
 // spacing: number (0 joins the items)   orientation: "horizontal" | "vertical"

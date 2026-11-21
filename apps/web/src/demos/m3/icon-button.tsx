@@ -4,7 +4,7 @@ import {
   type IconButtonWidth,
   ToggleIconButton,
   type ButtonSize,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { For } from "solid-js";
 import { DemoRow, DemoStack, FavoriteIcon, SettingsIcon, StarIcon } from "./shared";
 

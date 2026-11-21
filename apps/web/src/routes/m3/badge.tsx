@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { BadgeDemo } from "~/demos/m3/badge";
 import source from "~/demos/m3/badge.tsx?raw";
 
-const snippet = `import { Badge, BadgeAnchor } from "@solid-kit/kit/m3";
+const snippet = `import { Badge, BadgeAnchor } from "@solidx/kit/m3";
 
 <BadgeAnchor>
   <MailIcon />

@@ -8,7 +8,7 @@ export default function M3Index() {
     <PackageIndex
       title="Material 3"
       description="Material 3 Expressive components on the same API as UI."
-      snippet={'import { Button, Dialog, TextField, NavigationBar } from "@solid-kit/kit/m3";'}
+      snippet={'import { Button, Dialog, TextField, NavigationBar } from "@solidx/kit/m3";'}
       pages={pages}
     />
   );

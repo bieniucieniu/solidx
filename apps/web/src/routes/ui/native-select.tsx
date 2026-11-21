@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { NativeSelectDemo } from "~/demos/ui/native-select";
 import source from "~/demos/ui/native-select.tsx?raw";
 
-const snippet = `import { NativeSelect } from "@solid-kit/kit/ui";
+const snippet = `import { NativeSelect } from "@solidx/kit/ui";
 
 // size: "sm" | "default"
 <NativeSelect size="sm" value={fruit()} onInput={(event) => setFruit(event.currentTarget.value)}>

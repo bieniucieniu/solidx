@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { FabDemo } from "~/demos/m3/fab";
 import source from "~/demos/m3/fab.tsx?raw";
 
-const snippet = `import { ExtendedFab, Fab } from "@solid-kit/kit/m3";
+const snippet = `import { ExtendedFab, Fab } from "@solidx/kit/m3";
 
 // variant: "tonal-primary" | "tonal-secondary" | "tonal-tertiary" | "primary" | "secondary" | "tertiary"
 // size: "default" | "md" | "lg"

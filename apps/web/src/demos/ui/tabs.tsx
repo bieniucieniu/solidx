@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@solid-kit/kit/ui";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@solidx/kit/ui";
 import { For } from "solid-js";
 import { VariantRow, VariantStack } from "~/components/preview";
 

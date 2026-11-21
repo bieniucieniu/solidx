@@ -1,4 +1,4 @@
-import { buttonVariants, HoverCard, HoverCardContent, HoverCardTrigger } from "@solid-kit/kit/ui";
+import { buttonVariants, HoverCard, HoverCardContent, HoverCardTrigger } from "@solidx/kit/ui";
 
 export function HoverCardDemo() {
   return (

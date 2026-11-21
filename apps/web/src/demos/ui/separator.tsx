@@ -1,4 +1,4 @@
-import { Separator } from "@solid-kit/kit/ui";
+import { Separator } from "@solidx/kit/ui";
 
 export function SeparatorDemo() {
   return (

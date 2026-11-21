@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { TableDemo } from "~/demos/ui/table";
 import source from "~/demos/ui/table.tsx?raw";
 
-const snippet = `import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@solid-kit/kit/ui";
+const snippet = `import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@solidx/kit/ui";
 
 <Table>
   <TableHeader>

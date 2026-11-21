@@ -1,4 +1,4 @@
-import { Button, SnackbarRegion, snackbar } from "@solid-kit/kit/m3";
+import { Button, SnackbarRegion, snackbar } from "@solidx/kit/m3";
 
 let count = 0;
 

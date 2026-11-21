@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import Placeholder from "@tiptap/extension-placeholder";
 import StarterKit from "@tiptap/starter-kit";
 import { Markdown } from "tiptap-markdown";
-import { Tiptap, TiptapContent, useEditor, useTiptapState } from "@solid-kit/kit-1.9/tiptap";
+import { Tiptap, TiptapContent, useEditor, useTiptapState } from "@solidx/kit-1.9/tiptap";
 import { MenuBar } from "./menu-bar";
 
 const meta = {

@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { InputDemo } from "~/demos/ui/input";
 import source from "~/demos/ui/input.tsx?raw";
 
-const snippet = `import { Input, InputControl, InputDescription, InputLabel } from "@solid-kit/kit/ui";
+const snippet = `import { Input, InputControl, InputDescription, InputLabel } from "@solidx/kit/ui";
 
 // Input is the field: pass \`disabled\` or \`invalid\` here. The value goes on InputControl.
 <Input>

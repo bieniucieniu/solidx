@@ -1,4 +1,4 @@
-import { Textarea, TextareaControl, TextareaDescription, TextareaLabel } from "@solid-kit/kit/ui";
+import { Textarea, TextareaControl, TextareaDescription, TextareaLabel } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function TextareaDemo() {

@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@solid-kit/kit/ui";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@solidx/kit/ui";
 
 export function TableDemo() {
   return (

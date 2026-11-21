@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { AppBarDemo } from "~/demos/m3/app-bar";
 import source from "~/demos/m3/app-bar.tsx?raw";
 
-const snippet = `import { AppBar, AppBarHeadline, AppBarLeading, AppBarSubtitle, AppBarTitle, AppBarTrailing } from "@solid-kit/kit/m3";
+const snippet = `import { AppBar, AppBarHeadline, AppBarLeading, AppBarSubtitle, AppBarTitle, AppBarTrailing } from "@solidx/kit/m3";
 
 // variant: "small" | "medium" | "large"
 <AppBar variant="medium" scrolled={scrolled()}>

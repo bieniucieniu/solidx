@@ -4,7 +4,7 @@
   "title": "M3 Text field",
   "description": "Filled and outlined text field with a floating label. Styled wrapper around @kobalte/core/text-field.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/text-field.tsx",

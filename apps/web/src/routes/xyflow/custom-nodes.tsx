@@ -4,14 +4,14 @@ import source from "~/demos/xyflow/custom-nodes.tsx?raw";
 
 const CustomNodesDemo = clientOnly(() => import("~/demos/xyflow/custom-nodes"));
 
-const snippet = `import { Card, CardHeader, CardTitle, Switch, SwitchControl, SwitchLabel } from "@solid-kit/kit/m3";
+const snippet = `import { Card, CardHeader, CardTitle, Switch, SwitchControl, SwitchLabel } from "@solidx/kit/m3";
 import {
   Handle,
   Position,
   createFlow,
   useFlow,
   type NodeComponentProps,
-} from "@solid-kit/kit/xyflow";
+} from "@solidx/kit/xyflow";
 
 function TaskNode(props: NodeComponentProps) {
   const flow = useFlow();

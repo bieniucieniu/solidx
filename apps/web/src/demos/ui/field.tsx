@@ -8,7 +8,7 @@ import {
   FieldLegend,
   FieldSet,
   Switch,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 const inputClass =
   "h-7 w-full rounded-md border border-input bg-input/20 px-2 text-xs/relaxed text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30 dark:bg-input/30";

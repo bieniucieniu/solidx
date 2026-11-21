@@ -4,7 +4,7 @@ import {
   NavigationDrawerHeadline,
   NavigationDrawerItem,
   NavigationDrawerItemLabel,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { useLinkState } from "@solidjs/router";
 import { For, Show } from "solid-js";
 import type { NavItem } from "~/nav";

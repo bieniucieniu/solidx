@@ -4,7 +4,7 @@ import {
   ContextMenuItem,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function ContextMenuDemo() {

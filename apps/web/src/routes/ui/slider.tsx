@@ -9,7 +9,7 @@ const snippet = `import {
   SliderThumb,
   SliderTrack,
   SliderValueLabel,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Slider value={value()} onValueChange={(next) => setValue(next)} min={0} max={100}>
   <SliderValueLabel />

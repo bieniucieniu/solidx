@@ -1,4 +1,4 @@
-import { Pagination, PaginationItems } from "@solid-kit/kit/ui";
+import { Pagination, PaginationItems } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function PaginationDemo() {

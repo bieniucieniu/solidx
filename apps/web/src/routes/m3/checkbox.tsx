@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { CheckboxDemo } from "~/demos/m3/checkbox";
 import source from "~/demos/m3/checkbox.tsx?raw";
 
-const snippet = `import { Checkbox, CheckboxControl, CheckboxLabel } from "@solid-kit/kit/m3";
+const snippet = `import { Checkbox, CheckboxControl, CheckboxLabel } from "@solidx/kit/m3";
 
 // Checkbox is the label; the state goes on CheckboxControl.
 // \`checked\`: true | false | "indeterminate"

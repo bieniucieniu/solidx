@@ -10,7 +10,7 @@ export default function Document(props: ParentProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>solid-kit</title>
+        <title>solidx</title>
         {/* Before paint, so the first frame already has the right theme. */}
         <script innerHTML={themeInitScript} />
         <HydrationScript />

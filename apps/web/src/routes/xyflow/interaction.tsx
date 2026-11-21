@@ -5,7 +5,7 @@ import source from "~/demos/xyflow/interaction.tsx?raw";
 const InteractionDemo = clientOnly(() => import("~/demos/xyflow/interaction"));
 
 const snippet = `import { createSignal } from "solid-js";
-import { createFlow } from "@solid-kit/kit/xyflow";
+import { createFlow } from "@solidx/kit/xyflow";
 
 const [draggable, setDraggable] = createSignal(true);
 const [snap, setSnap] = createSignal(false);

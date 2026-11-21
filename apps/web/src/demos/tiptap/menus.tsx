@@ -1,8 +1,8 @@
 import Placeholder from "@tiptap/extension-placeholder";
 import StarterKit from "@tiptap/starter-kit";
 import { Show } from "solid-js";
-import { Tiptap, TiptapContent, useEditor } from "@solid-kit/kit/tiptap";
-import { BubbleMenu, FloatingMenu } from "@solid-kit/kit/tiptap/menus";
+import { Tiptap, TiptapContent, useEditor } from "@solidx/kit/tiptap";
+import { BubbleMenu, FloatingMenu } from "@solidx/kit/tiptap/menus";
 import { BlockButtons, HeadingButtons, MarkButtons, useMenuState } from "./menu-bar";
 
 const menuClass =

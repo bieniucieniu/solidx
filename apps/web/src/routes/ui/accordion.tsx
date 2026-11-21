@@ -8,7 +8,7 @@ const snippet = `import {
   AccordionHeader,
   AccordionItem,
   AccordionTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 // The value is an array of open items. Pass \`multiple\` to open several at once.
 <Accordion defaultValue={["one"]}>

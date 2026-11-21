@@ -13,7 +13,7 @@ const snippet = `import {
   SheetLabel,
   SheetOverlay,
   SheetTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 // SheetContent side: "top" | "right" | "bottom" | "left"
 <Sheet>

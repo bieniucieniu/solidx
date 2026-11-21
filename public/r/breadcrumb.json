@@ -4,7 +4,7 @@
   "title": "Breadcrumb",
   "description": "Breadcrumb. Styled wrapper around @kobalte/core/breadcrumbs.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/breadcrumb.tsx",

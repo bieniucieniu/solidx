@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ProgressDemo } from "~/demos/m3/progress";
 import source from "~/demos/m3/progress.tsx?raw";
 
-const snippet = `import { CircularProgress, Progress, ProgressFill, ProgressTrack } from "@solid-kit/kit/m3";
+const snippet = `import { CircularProgress, Progress, ProgressFill, ProgressTrack } from "@solidx/kit/m3";
 
 // A null value is indeterminate.
 <Progress value={60}>

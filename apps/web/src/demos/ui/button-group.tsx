@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@solid-kit/kit/ui";
+import { Button, ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@solidx/kit/ui";
 import { VariantRow, VariantStack } from "~/components/preview";
 
 export function ButtonGroupDemo() {

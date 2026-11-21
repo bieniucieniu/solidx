@@ -8,7 +8,7 @@ const snippet = `import {
   ContextMenuItem,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <ContextMenu>
   <ContextMenuTrigger>Right click</ContextMenuTrigger>

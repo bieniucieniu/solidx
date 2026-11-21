@@ -1,4 +1,4 @@
-import { Fab, IconButton, Toolbar, ToggleIconButton } from "@solid-kit/kit/m3";
+import { Fab, IconButton, Toolbar, ToggleIconButton } from "@solidx/kit/m3";
 import { AddIcon, DeleteIcon, DemoRow, DemoStack, EditIcon, ShareIcon, StarIcon } from "./shared";
 
 function Actions() {

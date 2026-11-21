@@ -1,11 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipPortal,
-  TooltipTrigger,
-  Button,
-} from "@solid-kit/kit-1.9/ui";
+import { Tooltip, TooltipContent, TooltipPortal, TooltipTrigger, Button } from "@solidx/kit-1.9/ui";
 
 const meta = {
   title: "UI/Tooltip",

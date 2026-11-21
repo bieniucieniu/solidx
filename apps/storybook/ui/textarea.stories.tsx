@@ -1,10 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import {
-  Textarea,
-  TextareaControl,
-  TextareaDescription,
-  TextareaLabel,
-} from "@solid-kit/kit-1.9/ui";
+import { Textarea, TextareaControl, TextareaDescription, TextareaLabel } from "@solidx/kit-1.9/ui";
 import { createSignal } from "solid-js";
 
 const meta = {

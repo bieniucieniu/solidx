@@ -1,4 +1,4 @@
-import { buttonVariants } from "@solid-kit/kit/m3";
+import { buttonVariants } from "@solidx/kit/m3";
 import type { RouteDefinition } from "@solidjs/router";
 import { httpStatus } from "@solidjs/web";
 

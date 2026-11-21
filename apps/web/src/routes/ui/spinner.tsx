@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SpinnerDemo } from "~/demos/ui/spinner";
 import source from "~/demos/ui/spinner.tsx?raw";
 
-const snippet = `import { Spinner } from "@solid-kit/kit/ui";
+const snippet = `import { Spinner } from "@solidx/kit/ui";
 
 <Spinner />`;
 

@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { CheckboxDemo } from "~/demos/ui/checkbox";
 import source from "~/demos/ui/checkbox.tsx?raw";
 
-const snippet = `import { Checkbox, CheckboxLabel } from "@solid-kit/kit/ui";
+const snippet = `import { Checkbox, CheckboxLabel } from "@solidx/kit/ui";
 
 // \`checked\`: true | false | "indeterminate"
 <CheckboxLabel>

@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { PaginationDemo } from "~/demos/ui/pagination";
 import source from "~/demos/ui/pagination.tsx?raw";
 
-const snippet = `import { Pagination, PaginationItems } from "@solid-kit/kit/ui";
+const snippet = `import { Pagination, PaginationItems } from "@solidx/kit/ui";
 
 <Pagination pageCount={10} page={page()} onPageChange={(next) => setPage(next)}>
   <PaginationItems />

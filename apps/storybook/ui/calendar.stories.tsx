@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { Calendar } from "@solid-kit/kit-1.9/ui";
+import { Calendar } from "@solidx/kit-1.9/ui";
 import { createSignal } from "solid-js";
 
 const meta = {

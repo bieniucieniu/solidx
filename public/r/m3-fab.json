@@ -3,7 +3,7 @@
   "name": "m3-fab",
   "title": "M3 FAB",
   "description": "Floating action button and extended FAB in three sizes and six colors.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/fab.tsx",

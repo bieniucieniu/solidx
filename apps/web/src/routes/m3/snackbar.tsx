@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SnackbarDemo } from "~/demos/m3/snackbar";
 import source from "~/demos/m3/snackbar.tsx?raw";
 
-const snippet = `import { SnackbarRegion, snackbar } from "@solid-kit/kit/m3";
+const snippet = `import { SnackbarRegion, snackbar } from "@solidx/kit/m3";
 
 // Mount once. Snackbars have their own queue, apart from other toasts.
 <SnackbarRegion />

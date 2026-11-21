@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { MotionConfig, motion } from "@solid-kit/kit-1.9/motion";
+import { MotionConfig, motion } from "@solidx/kit-1.9/motion";
 
 const meta = {
   title: "Motion/Hover",

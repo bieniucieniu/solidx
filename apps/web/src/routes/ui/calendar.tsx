@@ -2,7 +2,7 @@ import { DocsPage, VariantRow, VariantStack } from "~/components/preview";
 import { CalendarDemo, CalendarRangeDemo } from "~/demos/ui/calendar";
 import source from "~/demos/ui/calendar.tsx?raw";
 
-const snippet = `import { Calendar } from "@solid-kit/kit/ui";
+const snippet = `import { Calendar } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 // Values are ISO dates. mode: "single" | "multiple" | "range"

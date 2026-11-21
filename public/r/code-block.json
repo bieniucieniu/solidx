@@ -4,9 +4,9 @@
   "title": "Code Block",
   "description": "Code block with header, copy button, line numbers, diff and highlighted lines, and Shiki syntax highlighting.",
   "registryDependencies": [
-    "bieniucieniu/solid-kit/utils",
-    "bieniucieniu/solid-kit/button",
-    "bieniucieniu/solid-kit/highlighter"
+    "bieniucieniu/solidx/utils",
+    "bieniucieniu/solidx/button",
+    "bieniucieniu/solidx/highlighter"
   ],
   "files": [
     {

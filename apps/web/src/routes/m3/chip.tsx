@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ChipDemo } from "~/demos/m3/chip";
 import source from "~/demos/m3/chip.tsx?raw";
 
-const snippet = `import { AssistChip, ChipSet, FilterChip, InputChip, InputChipRemove, SuggestionChip } from "@solid-kit/kit/m3";
+const snippet = `import { AssistChip, ChipSet, FilterChip, InputChip, InputChipRemove, SuggestionChip } from "@solidx/kit/m3";
 
 <ChipSet>
   <AssistChip><StarIcon />Add to favorites</AssistChip>

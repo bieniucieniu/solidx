@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ScrollAreaDemo } from "~/demos/m3/scroll-area";
 import source from "~/demos/m3/scroll-area.tsx?raw";
 
-const snippet = `import { ScrollArea } from "@solid-kit/kit/m3";
+const snippet = `import { ScrollArea } from "@solidx/kit/m3";
 
 <ScrollArea class="h-72">
   <List>...</List>

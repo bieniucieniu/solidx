@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { NavigationRailDemo } from "~/demos/m3/navigation-rail";
 import source from "~/demos/m3/navigation-rail.tsx?raw";
 
-const snippet = `import { NavigationRail, NavigationRailHeader, NavigationRailIcon, NavigationRailItem, NavigationRailLabel } from "@solid-kit/kit/m3";
+const snippet = `import { NavigationRail, NavigationRailHeader, NavigationRailIcon, NavigationRailItem, NavigationRailLabel } from "@solidx/kit/m3";
 
 <NavigationRail expanded={expanded()}>
   <NavigationRailHeader>

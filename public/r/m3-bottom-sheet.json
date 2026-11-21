@@ -4,7 +4,7 @@
   "title": "M3 Bottom sheet",
   "description": "Modal bottom sheet with drag-to-dismiss. Styled wrapper around @corvu/drawer.",
   "dependencies": ["@corvu/drawer"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/m3-scroll-area"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/m3-scroll-area"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/bottom-sheet.tsx",
