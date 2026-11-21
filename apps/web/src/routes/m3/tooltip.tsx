@@ -11,7 +11,7 @@ const snippet = `import {
   TooltipContent,
   TooltipTrigger,
   iconButtonVariants,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 
 <Tooltip>
   <TooltipTrigger class={iconButtonVariants()} aria-label="Favorite"><StarIcon /></TooltipTrigger>

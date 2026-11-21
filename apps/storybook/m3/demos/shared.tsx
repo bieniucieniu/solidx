@@ -1,4 +1,4 @@
-import { cn } from "@solid-kit/kit-1.9/m3";
+import { cn } from "@solidx/kit-1.9/m3";
 import type { JSX } from "solid-js";
 
 /** Demo helpers. No app aliases, so Storybook can render the same demos. */

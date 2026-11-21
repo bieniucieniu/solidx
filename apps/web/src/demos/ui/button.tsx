@@ -1,4 +1,4 @@
-import { Button, type ButtonSize, type ButtonVariant } from "@solid-kit/kit/ui";
+import { Button, type ButtonSize, type ButtonVariant } from "@solidx/kit/ui";
 import { type JSX } from "@solidjs/web";
 import { For } from "solid-js";
 import { VariantRow, VariantStack } from "~/components/preview";

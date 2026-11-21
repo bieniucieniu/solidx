@@ -11,7 +11,7 @@ import {
   NavigationDrawerItem,
   NavigationDrawerItemBadge,
   NavigationDrawerItemLabel,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { createSignal, For, type JSX } from "solid-js";
 import { DeleteIcon, HomeIcon, MailIcon, SendIcon, StarIcon } from "./shared";
 

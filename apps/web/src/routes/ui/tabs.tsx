@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { TabsDemo } from "~/demos/ui/tabs";
 import source from "~/demos/ui/tabs.tsx?raw";
 
-const snippet = `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@solid-kit/kit/ui";
+const snippet = `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@solidx/kit/ui";
 
 // TabsList variant: "default" | "line"   Tabs orientation: "horizontal" | "vertical"
 <Tabs defaultValue="account">

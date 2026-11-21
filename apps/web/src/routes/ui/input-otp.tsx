@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { InputOTPDemo } from "~/demos/ui/input-otp";
 import source from "~/demos/ui/input-otp.tsx?raw";
 
-const snippet = `import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@solid-kit/kit/ui";
+const snippet = `import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@solidx/kit/ui";
 
 // One native input holds the code; the slots display it.
 <InputOTP maxLength={6}>

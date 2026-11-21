@@ -4,7 +4,7 @@
   "title": "Input",
   "description": "Input. Styled wrapper around @kobalte/core/text-field.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/input.tsx",

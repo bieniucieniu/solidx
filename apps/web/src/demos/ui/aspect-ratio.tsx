@@ -1,4 +1,4 @@
-import { AspectRatio } from "@solid-kit/kit/ui";
+import { AspectRatio } from "@solidx/kit/ui";
 
 export function AspectRatioDemo() {
   return (

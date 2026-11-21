@@ -1,4 +1,4 @@
-import { InputChip } from "@solid-kit/kit/m3";
+import { InputChip } from "@solidx/kit/m3";
 import {
   BaseEdge,
   Flow,
@@ -10,9 +10,9 @@ import {
   type EdgeComponentProps,
   type FlowEdge,
   type FlowNode,
-} from "@solid-kit/kit/xyflow";
-import { Background, Controls } from "@solid-kit/kit/xyflow/panels";
-import "@solid-kit/kit/xyflow/style.css";
+} from "@solidx/kit/xyflow";
+import { Background, Controls } from "@solidx/kit/xyflow/panels";
+import "@solidx/kit/xyflow/style.css";
 
 type PathKind = "bezier" | "straight" | "step" | "smoothstep";
 

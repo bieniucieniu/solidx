@@ -1,4 +1,4 @@
-import { MotionConfig, motion } from "@solid-kit/kit/motion";
+import { MotionConfig, motion } from "@solidx/kit/motion";
 
 export default function HoverDemo() {
   return (

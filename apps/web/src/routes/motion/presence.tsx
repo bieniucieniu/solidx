@@ -4,7 +4,7 @@ import source from "~/demos/motion/presence.tsx?raw";
 
 const PresenceDemo = clientOnly(() => import("~/demos/motion/presence"));
 
-const snippet = `import { AnimatePresence, motion } from "@solid-kit/kit/motion";
+const snippet = `import { AnimatePresence, motion } from "@solidx/kit/motion";
 
 <AnimatePresence when={open}>
   <motion.div

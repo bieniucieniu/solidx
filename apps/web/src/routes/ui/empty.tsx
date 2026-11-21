@@ -9,7 +9,7 @@ const snippet = `import {
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Empty>
   <EmptyHeader>

@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ButtonGroupDemo } from "~/demos/m3/button-group";
 import source from "~/demos/m3/button-group.tsx?raw";
 
-const snippet = `import { ButtonGroup, ToggleButton } from "@solid-kit/kit/m3";
+const snippet = `import { ButtonGroup, ToggleButton } from "@solidx/kit/m3";
 
 <ButtonGroup variant="connected" size="md">
   <ToggleButton variant="tonal" pressed={view() === "day"} onPressedChange={() => setView("day")}>

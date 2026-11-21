@@ -15,7 +15,7 @@ import {
   SideSheetPortal,
   SideSheetTitle,
   SideSheetTrigger,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { For } from "solid-js";
 
 const filters = ["In stock", "Free shipping", "On sale", "New arrivals"];

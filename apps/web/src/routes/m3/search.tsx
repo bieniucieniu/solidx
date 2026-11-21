@@ -10,7 +10,7 @@ const snippet = `import {
   SearchItem,
   SearchListbox,
   SearchNoResult,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 
 // Search is ui-sdk's Combobox: it filters the items by their label as you type.
 <Search>

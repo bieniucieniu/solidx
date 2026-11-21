@@ -4,7 +4,7 @@
   "title": "M3 Dialog",
   "description": "Basic and full-screen dialog. Styled wrapper around @corvu/dialog.",
   "dependencies": ["@corvu/dialog"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/m3-button"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/m3-button"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/dialog.tsx",

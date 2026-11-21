@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ToolbarDemo } from "~/demos/m3/toolbar";
 import source from "~/demos/m3/toolbar.tsx?raw";
 
-const snippet = `import { Toolbar } from "@solid-kit/kit/m3";
+const snippet = `import { Toolbar } from "@solidx/kit/m3";
 
 // variant: "docked" | "floating"; color: "standard" | "vibrant"
 <Toolbar variant="floating" color="vibrant">

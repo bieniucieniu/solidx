@@ -4,7 +4,7 @@
   "title": "Navigation Menu",
   "description": "Navigation menu. Several dropdowns that open on hover and share one viewport, from @kobalte/core/navigation-menu.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/navigation-menu.tsx",

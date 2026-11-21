@@ -14,7 +14,7 @@ import {
   ListItemContent,
   ListItemHeadline,
   ListItemLeading,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { Index } from "solid-js";
 import { MailIcon, PersonIcon, ShareIcon } from "./shared";
 

@@ -5,7 +5,7 @@ import {
   ProgressLabel,
   ProgressTrack,
   ProgressValueLabel,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { createSignal, onSettled } from "solid-js";
 import { DemoRow, DemoStack } from "./shared";
 

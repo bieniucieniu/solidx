@@ -5,7 +5,7 @@ import {
   NavigationBarIcon,
   NavigationBarItem,
   NavigationBarLabel,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { createSignal, For, type JSX } from "solid-js";
 import { DemoRow, DemoStack, HomeIcon, MailIcon, PersonIcon, StarIcon } from "./shared";
 

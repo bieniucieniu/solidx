@@ -9,7 +9,7 @@ import {
   PopoverPortal,
   PopoverTrigger,
   Button,
-} from "@solid-kit/kit-1.9/ui";
+} from "@solidx/kit-1.9/ui";
 
 const meta = {
   title: "UI/Popover",

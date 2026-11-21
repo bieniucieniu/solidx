@@ -3,7 +3,7 @@
   "name": "native-select",
   "title": "Native Select",
   "description": "Native select element. Styled HTML.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/native-select.tsx",

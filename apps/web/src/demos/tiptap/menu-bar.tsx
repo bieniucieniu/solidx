@@ -1,7 +1,7 @@
 import { type JSX } from "@solidjs/web";
 import { For, Show } from "solid-js";
-import { ButtonGroup, IconButton, ToggleIconButton, Toolbar } from "@solid-kit/kit/m3";
-import { useTiptap, useTiptapState } from "@solid-kit/kit/tiptap";
+import { ButtonGroup, IconButton, ToggleIconButton, Toolbar } from "@solidx/kit/m3";
+import { useTiptap, useTiptapState } from "@solidx/kit/tiptap";
 
 const inactive = {
   isBold: false,

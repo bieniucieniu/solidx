@@ -1,7 +1,7 @@
 import { cleanup, render } from "@solidjs/testing-library";
 import { afterEach, beforeEach, expect } from "vite-plus/test";
 import { page, type Locator } from "vite-plus/test/browser";
-import { Background, Controls } from "@solid-kit/kit-1.9/xyflow/panels";
+import { Background, Controls } from "@solidx/kit-1.9/xyflow/panels";
 import {
   Flow,
   Handle,

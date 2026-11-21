@@ -1,11 +1,11 @@
-import { buttonVariants } from "@solid-kit/kit/m3";
+import { buttonVariants } from "@solidx/kit/m3";
 import { For } from "solid-js";
 import { packages } from "~/nav";
 
 export default function Home() {
   return (
     <main class="mx-auto max-w-6xl px-6 py-16">
-      <h1 class="typescale-display-small text-on-surface">solid-kit</h1>
+      <h1 class="typescale-display-small text-on-surface">solidx</h1>
       <p class="mt-3 max-w-xl typescale-body-large text-on-surface-variant">
         Solid 2.0 components on ui-sdk, Material 3, motion, node graphs, and a Tiptap editor.
       </p>

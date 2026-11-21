@@ -9,7 +9,7 @@ import {
   CodeBlockLine,
   CodeBlockTitle,
   createHighlightedCode,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { createSignal, For } from "solid-js";
 import { VariantRow, VariantStack } from "~/components/preview";
 

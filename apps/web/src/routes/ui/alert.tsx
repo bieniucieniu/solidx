@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { AlertDemo } from "~/demos/ui/alert";
 import source from "~/demos/ui/alert.tsx?raw";
 
-const snippet = `import { Alert, AlertDescription, AlertTitle } from "@solid-kit/kit/ui";
+const snippet = `import { Alert, AlertDescription, AlertTitle } from "@solidx/kit/ui";
 
 // variant: "default" | "destructive"
 <Alert variant="destructive">

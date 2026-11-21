@@ -4,7 +4,7 @@
   "title": "Tabs",
   "description": "Tabs. Styled wrapper around @kobalte/core/tabs.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/tabs.tsx",

@@ -9,7 +9,7 @@ const snippet = `import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <InputGroup>
   <InputGroupAddon>

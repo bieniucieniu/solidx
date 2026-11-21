@@ -10,7 +10,7 @@ import {
   TextFieldTextArea,
   TextFieldTrailing,
   type TextFieldVariant,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { For } from "solid-js";
 import { CloseIcon, DemoRow, DemoStack, SearchIcon } from "./shared";
 

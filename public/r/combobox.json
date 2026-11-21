@@ -4,7 +4,7 @@
   "title": "Combobox",
   "description": "Combobox. Styled wrapper around @kobalte/core/combobox.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/combobox.tsx",

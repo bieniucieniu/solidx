@@ -13,7 +13,7 @@ const snippet = `import {
   AlertDialogOverlay,
   AlertDialogTrigger,
   buttonVariants,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 // AlertDialogContent size: "default" | "sm"
 <AlertDialog>

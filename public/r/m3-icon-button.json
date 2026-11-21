@@ -4,7 +4,7 @@
   "title": "M3 Icon button",
   "description": "Icon button: standard, filled, tonal, outlined; five sizes, three widths; toggle variant.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/m3-button"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/m3-button"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/icon-button.tsx",

@@ -4,7 +4,7 @@
   "title": "M3 Chips",
   "description": "Assist, filter, input, and suggestion chips.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/chip.tsx",

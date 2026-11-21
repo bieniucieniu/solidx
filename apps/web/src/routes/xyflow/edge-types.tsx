@@ -4,8 +4,8 @@ import source from "~/demos/xyflow/edge-types.tsx?raw";
 
 const EdgeTypesDemo = clientOnly(() => import("~/demos/xyflow/edge-types"));
 
-const snippet = `import { InputChip } from "@solid-kit/kit/m3";
-import { BaseEdge, createFlow, getBezierPath, type EdgeComponentProps } from "@solid-kit/kit/xyflow";
+const snippet = `import { InputChip } from "@solidx/kit/m3";
+import { BaseEdge, createFlow, getBezierPath, type EdgeComponentProps } from "@solidx/kit/xyflow";
 
 function LabeledEdge(props: EdgeComponentProps) {
   const geometry = () => getBezierPath(props);

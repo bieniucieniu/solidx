@@ -4,7 +4,7 @@
   "title": "Skeleton",
   "description": "Skeleton. Styled wrapper around @kobalte/core/skeleton.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/skeleton.tsx",

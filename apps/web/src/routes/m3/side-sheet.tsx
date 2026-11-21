@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SideSheetDemo } from "~/demos/m3/side-sheet";
 import source from "~/demos/m3/side-sheet.tsx?raw";
 
-const snippet = `import { SideSheet, SideSheetActions, SideSheetBody, SideSheetClose, SideSheetContent, SideSheetHeader, SideSheetOverlay, SideSheetTitle, SideSheetTrigger, buttonVariants } from "@solid-kit/kit/m3";
+const snippet = `import { SideSheet, SideSheetActions, SideSheetBody, SideSheetClose, SideSheetContent, SideSheetHeader, SideSheetOverlay, SideSheetTitle, SideSheetTrigger, buttonVariants } from "@solidx/kit/m3";
 
 <SideSheet>
   <SideSheetTrigger class={buttonVariants()}>Filters</SideSheetTrigger>

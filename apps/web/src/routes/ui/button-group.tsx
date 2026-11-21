@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ButtonGroupDemo } from "~/demos/ui/button-group";
 import source from "~/demos/ui/button-group.tsx?raw";
 
-const snippet = `import { Button, ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@solid-kit/kit/ui";
+const snippet = `import { Button, ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@solidx/kit/ui";
 
 // orientation: "horizontal" | "vertical"
 <ButtonGroup orientation="vertical">

@@ -1,8 +1,8 @@
 {
-  "name": "@solid-kit/kit-1.9",
+  "name": "@solidx/kit-1.9",
   "version": "0.0.1",
   "private": true,
-  "description": "The frozen Solid 1.9 packages: ui and m3 (shadcn registries on Kobalte and corvu), motion, xyflow, and tiptap. Same layout as @solid-kit/kit.",
+  "description": "The frozen Solid 1.9 packages: ui and m3 (shadcn registries on Kobalte and corvu), motion, xyflow, and tiptap. Same layout as @solidx/kit.",
   "files": [
     "src",
     "dist"

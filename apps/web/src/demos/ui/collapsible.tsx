@@ -1,4 +1,4 @@
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@solid-kit/kit/ui";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@solidx/kit/ui";
 
 export function CollapsibleDemo() {
   return (

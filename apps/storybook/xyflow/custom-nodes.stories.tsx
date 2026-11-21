@@ -12,7 +12,7 @@ import {
   SwitchInput,
   SwitchLabel,
   SwitchThumb,
-} from "@solid-kit/kit-1.9/ui";
+} from "@solidx/kit-1.9/ui";
 import {
   Flow,
   Handle,
@@ -20,9 +20,9 @@ import {
   createFlow,
   useFlow,
   type NodeComponentProps,
-} from "@solid-kit/kit-1.9/xyflow";
-import { Background, Controls } from "@solid-kit/kit-1.9/xyflow/panels";
-import "@solid-kit/kit-1.9/xyflow/style.css";
+} from "@solidx/kit-1.9/xyflow";
+import { Background, Controls } from "@solidx/kit-1.9/xyflow/panels";
+import "@solidx/kit-1.9/xyflow/style.css";
 
 const meta = {
   title: "Xyflow/Custom nodes",

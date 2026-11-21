@@ -1,10 +1,4 @@
-import {
-  Switch,
-  SwitchControl,
-  SwitchInput,
-  SwitchLabel,
-  SwitchThumb,
-} from "@solid-kit/kit-1.9/m3";
+import { Switch, SwitchControl, SwitchInput, SwitchLabel, SwitchThumb } from "@solidx/kit-1.9/m3";
 import { DemoRow, DemoStack } from "./shared";
 
 function Example(props: { label: string; checked?: boolean; icons?: boolean; disabled?: boolean }) {

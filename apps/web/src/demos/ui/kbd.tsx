@@ -1,4 +1,4 @@
-import { Kbd } from "@solid-kit/kit/ui";
+import { Kbd } from "@solidx/kit/ui";
 
 export function KbdDemo() {
   return (

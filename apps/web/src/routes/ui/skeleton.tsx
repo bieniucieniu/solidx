@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SkeletonDemo } from "~/demos/ui/skeleton";
 import source from "~/demos/ui/skeleton.tsx?raw";
 
-const snippet = `import { Skeleton } from "@solid-kit/kit/ui";
+const snippet = `import { Skeleton } from "@solidx/kit/ui";
 
 <Skeleton visible class="h-8 w-48">
   Loaded text

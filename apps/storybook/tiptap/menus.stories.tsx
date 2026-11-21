@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "storybook-solidjs-vite";
 import Placeholder from "@tiptap/extension-placeholder";
 import StarterKit from "@tiptap/starter-kit";
 import { Show } from "solid-js";
-import { Tiptap, TiptapContent, useEditor } from "@solid-kit/kit-1.9/tiptap";
-import { BubbleMenu, FloatingMenu } from "@solid-kit/kit-1.9/tiptap/menus";
+import { Tiptap, TiptapContent, useEditor } from "@solidx/kit-1.9/tiptap";
+import { BubbleMenu, FloatingMenu } from "@solidx/kit-1.9/tiptap/menus";
 import { BlockButtons, HeadingButtons, MarkButtons, useMenuState } from "./menu-bar";
 
 const meta = {

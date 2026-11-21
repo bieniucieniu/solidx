@@ -4,7 +4,7 @@
   "title": "Accordion",
   "description": "Accordion. Styled wrapper around @corvu/accordion.",
   "dependencies": ["@corvu/accordion"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/accordion.tsx",

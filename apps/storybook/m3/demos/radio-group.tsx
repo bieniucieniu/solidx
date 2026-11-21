@@ -6,7 +6,7 @@ import {
   RadioGroupItemInput,
   RadioGroupItemLabel,
   RadioGroupLabel,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { For } from "solid-js";
 
 const options = ["Ringtone", "Vibrate", "Silent"];

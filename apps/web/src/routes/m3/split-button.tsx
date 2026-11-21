@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SplitButtonDemo } from "~/demos/m3/split-button";
 import source from "~/demos/m3/split-button.tsx?raw";
 
-const snippet = `import { Menu, MenuContent, MenuItem, SplitButton, SplitButtonAction, SplitButtonTrigger } from "@solid-kit/kit/m3";
+const snippet = `import { Menu, MenuContent, MenuItem, SplitButton, SplitButtonAction, SplitButtonTrigger } from "@solidx/kit/m3";
 
 <SplitButton variant="tonal" size="sm">
   <SplitButtonAction>Send</SplitButtonAction>

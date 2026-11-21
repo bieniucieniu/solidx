@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function DropdownMenuDemo() {

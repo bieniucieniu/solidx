@@ -18,7 +18,7 @@ import {
   MenuSubContent,
   MenuSubTrigger,
   MenuTrigger,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { createSignal } from "solid-js";
 import { DeleteIcon, EditIcon, ShareIcon } from "./shared";
 

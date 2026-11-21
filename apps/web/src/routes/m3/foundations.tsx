@@ -3,7 +3,7 @@ import { FoundationsDemo } from "~/demos/m3/foundations";
 import source from "~/demos/m3/foundations.tsx?raw";
 
 const snippet = `/* app.css */
-@import "@solid-kit/kit/m3/theme.css";
+@import "@solidx/kit/m3/theme.css";
 
 /* Color roles */
 <div class="bg-primary-container text-on-primary-container" />

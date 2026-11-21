@@ -9,7 +9,7 @@ import {
   ModalNavigationDrawerTrigger,
   buttonVariants,
   iconButtonVariants,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { useLinkState, useLocation } from "@solidjs/router";
 import { For, Show, createEffect, createSignal } from "solid-js";
 import { SidebarNav } from "~/components/sidebar-nav";
@@ -76,7 +76,7 @@ export function Header() {
           href="/"
           class="mr-2 shrink-0 px-2 typescale-title-medium whitespace-nowrap text-on-surface"
         >
-          solid-kit
+          solidx
         </a>
       </AppBarLeading>
       <nav

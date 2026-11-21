@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemContent, ListItemHeadline, ScrollArea } from "@solid-kit/kit/m3";
+import { List, ListItem, ListItemContent, ListItemHeadline, ScrollArea } from "@solidx/kit/m3";
 import { For } from "solid-js";
 
 const items = Array.from({ length: 20 }, (_, i) => `Item ${i + 1}`);

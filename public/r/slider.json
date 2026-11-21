@@ -4,7 +4,7 @@
   "title": "Slider",
   "description": "Slider. Styled wrapper around @kobalte/core/slider.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/slider.tsx",

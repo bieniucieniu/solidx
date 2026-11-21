@@ -7,7 +7,7 @@ import {
   AppBarTrailing,
   type AppBarVariant,
   IconButton,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { For } from "solid-js";
 import { ArrowBackIcon, DemoRow, DemoStack, MoreVertIcon, StarIcon } from "./shared";
 

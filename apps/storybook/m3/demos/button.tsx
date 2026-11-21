@@ -5,7 +5,7 @@ import {
   type ButtonVariant,
   ToggleButton,
   type ToggleButtonVariant,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { For } from "solid-js";
 import { AddIcon, DemoRow, DemoStack, EditIcon, FavoriteIcon } from "./shared";
 

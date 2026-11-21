@@ -5,7 +5,7 @@ import {
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function EmptyDemo() {
   return (

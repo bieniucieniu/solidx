@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { Flow, Position, createFlow } from "@solid-kit/kit-1.9/xyflow";
-import { Background, Controls } from "@solid-kit/kit-1.9/xyflow/panels";
-import "@solid-kit/kit-1.9/xyflow/style.css";
+import { Flow, Position, createFlow } from "@solidx/kit-1.9/xyflow";
+import { Background, Controls } from "@solidx/kit-1.9/xyflow/panels";
+import "@solidx/kit-1.9/xyflow/style.css";
 
 const meta = {
   title: "Xyflow/Canvas",

@@ -115,7 +115,7 @@ import {
   TooltipTrigger,
   buttonVariants,
   toast,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import type { JSX } from "@solidjs/web";
 
 function Section(props: { title: string; children: JSX.Element }) {
@@ -192,7 +192,7 @@ export function UiPage() {
         </Tooltip>
         <HoverCard>
           <HoverCardTrigger href="#ui" class="text-xs underline">
-            @solid-kit
+            @solidx
           </HoverCardTrigger>
           <HoverCardContent>Solid components on ui-sdk.</HoverCardContent>
         </HoverCard>

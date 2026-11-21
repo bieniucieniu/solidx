@@ -4,7 +4,7 @@
   "title": "Calendar",
   "description": "Date grid with single, multiple, and range selection. Styled wrapper around @corvu/calendar.",
   "dependencies": ["@corvu/calendar"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/button"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/button"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/calendar.tsx",

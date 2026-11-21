@@ -13,7 +13,7 @@ import {
   TabsIndicator,
   TabsList,
   TabsTrigger,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import type { JSX } from "@solidjs/web";
 import { For, Show } from "solid-js";
 

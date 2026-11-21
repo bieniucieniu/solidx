@@ -1,4 +1,4 @@
-import { Badge, type BadgeVariant } from "@solid-kit/kit/ui";
+import { Badge, type BadgeVariant } from "@solidx/kit/ui";
 import { For } from "solid-js";
 
 const variants: BadgeVariant[] = [

@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxControl, CheckboxLabel } from "@solid-kit/kit/m3";
+import { Checkbox, CheckboxControl, CheckboxLabel } from "@solidx/kit/m3";
 import { DemoRow, DemoStack } from "./shared";
 
 function Example(props: {

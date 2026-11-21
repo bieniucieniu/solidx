@@ -5,7 +5,7 @@ import source from "~/demos/tiptap/basic.tsx?raw";
 const BasicEditor = clientOnly(() => import("~/demos/tiptap/basic"));
 
 const snippet = `import StarterKit from "@tiptap/starter-kit";
-import { Tiptap, TiptapContent, useEditor } from "@solid-kit/kit/tiptap";
+import { Tiptap, TiptapContent, useEditor } from "@solidx/kit/tiptap";
 
 const editor = useEditor(() => ({
   extensions: [StarterKit],

@@ -47,7 +47,7 @@ import {
   TooltipTrigger,
   buttonVariants,
   snackbar,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 
 export function M3Page() {
   return (

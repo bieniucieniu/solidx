@@ -1,6 +1,6 @@
 import Placeholder from "@tiptap/extension-placeholder";
 import StarterKit from "@tiptap/starter-kit";
-import { Tiptap, TiptapContent, useEditor } from "@solid-kit/kit/tiptap";
+import { Tiptap, TiptapContent, useEditor } from "@solidx/kit/tiptap";
 import { MenuBar } from "./menu-bar";
 
 export default function BasicEditor() {

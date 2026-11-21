@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { TabsDemo } from "~/demos/m3/tabs";
 import source from "~/demos/m3/tabs.tsx?raw";
 
-const snippet = `import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@solid-kit/kit/m3";
+const snippet = `import { Tabs, TabsContent, TabsIndicator, TabsList, TabsTrigger } from "@solidx/kit/m3";
 
 // variant: "primary" | "secondary"
 <Tabs defaultValue="mail">

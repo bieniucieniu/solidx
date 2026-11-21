@@ -1,5 +1,5 @@
-@import "@solid-kit/kit-1.9/ui/theme.css";
-@import "@solid-kit/kit-1.9/m3/tokens.css";
+@import "@solidx/kit-1.9/ui/theme.css";
+@import "@solidx/kit-1.9/m3/tokens.css";
 @source "../../../packages/1.9/src";
 @source "../ui";
 @source "../m3";

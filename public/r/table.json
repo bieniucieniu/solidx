@@ -3,7 +3,7 @@
   "name": "table",
   "title": "Table",
   "description": "Table with header, body, row, head, and cell.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/table.tsx",

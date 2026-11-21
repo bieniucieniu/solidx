@@ -12,7 +12,7 @@ const snippet = `import {
   ComboboxLabel,
   ComboboxListbox,
   ComboboxTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Combobox value={value()} onValueChange={(next) => setValue(next)}>
   <ComboboxLabel>Fruit</ComboboxLabel>

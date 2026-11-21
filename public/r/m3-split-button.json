@@ -4,7 +4,7 @@
   "title": "M3 Split button",
   "description": "Main action joined to a menu trigger. Use with m3-menu.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils", "bieniucieniu/solid-kit/m3-button"],
+  "registryDependencies": ["bieniucieniu/solidx/utils", "bieniucieniu/solidx/m3-button"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/split-button.tsx",

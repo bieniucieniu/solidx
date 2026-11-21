@@ -8,7 +8,7 @@ export default function XYFlowIndex() {
     <PackageIndex
       title="XYFlow"
       description="A canvas for nodes and edges. The store owns the graph."
-      snippet={'import { Flow, Handle, createFlow } from "@solid-kit/kit/xyflow";'}
+      snippet={'import { Flow, Handle, createFlow } from "@solidx/kit/xyflow";'}
       pages={pages}
     />
   );

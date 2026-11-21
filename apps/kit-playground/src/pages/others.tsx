@@ -1,8 +1,8 @@
-import { AnimatePresence, MotionConfig, motion } from "@solid-kit/kit/motion";
-import { Tiptap, TiptapContent, useEditor, useTiptapState } from "@solid-kit/kit/tiptap";
-import { Button } from "@solid-kit/kit/ui";
-import { Flow, Position, createFlow } from "@solid-kit/kit/xyflow";
-import { Background, Controls } from "@solid-kit/kit/xyflow/panels";
+import { AnimatePresence, MotionConfig, motion } from "@solidx/kit/motion";
+import { Tiptap, TiptapContent, useEditor, useTiptapState } from "@solidx/kit/tiptap";
+import { Button } from "@solidx/kit/ui";
+import { Flow, Position, createFlow } from "@solidx/kit/xyflow";
+import { Background, Controls } from "@solidx/kit/xyflow/panels";
 import StarterKit from "@tiptap/starter-kit";
 import { createSignal } from "solid-js";
 

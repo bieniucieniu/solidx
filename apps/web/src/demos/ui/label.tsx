@@ -1,4 +1,4 @@
-import { Label } from "@solid-kit/kit/ui";
+import { Label } from "@solidx/kit/ui";
 
 export function LabelDemo() {
   return (

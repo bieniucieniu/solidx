@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { MotionConfig, motion, useMotionValue, useSpring } from "@solid-kit/kit-1.9/motion";
-import { Button } from "@solid-kit/kit-1.9/ui";
+import { MotionConfig, motion, useMotionValue, useSpring } from "@solidx/kit-1.9/motion";
+import { Button } from "@solidx/kit-1.9/ui";
 
 const meta = {
   title: "Motion/Spring",

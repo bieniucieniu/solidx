@@ -13,7 +13,7 @@ const snippet = `import {
   DrawerLabel,
   DrawerOverlay,
   DrawerTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Drawer>
   <DrawerTrigger class={buttonVariants()}>Open</DrawerTrigger>

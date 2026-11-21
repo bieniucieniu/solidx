@@ -5,7 +5,7 @@ import {
   SliderThumb,
   SliderTrack,
   SliderValueLabel,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { DemoRow, DemoStack } from "./shared";
 
 export function SliderDemo() {

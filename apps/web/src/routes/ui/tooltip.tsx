@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { TooltipDemo } from "~/demos/ui/tooltip";
 import source from "~/demos/ui/tooltip.tsx?raw";
 
-const snippet = `import { buttonVariants, Tooltip, TooltipContent, TooltipTrigger } from "@solid-kit/kit/ui";
+const snippet = `import { buttonVariants, Tooltip, TooltipContent, TooltipTrigger } from "@solidx/kit/ui";
 
 <Tooltip>
   <TooltipTrigger class={buttonVariants()}>Hover</TooltipTrigger>

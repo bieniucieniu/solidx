@@ -27,7 +27,7 @@ function App() {
     <div class={{ dark: dark() }}>
       <div class="min-h-screen bg-background text-foreground">
         <header class="sticky top-0 z-40 flex items-center gap-1 border-b bg-background/90 px-4 py-2 backdrop-blur">
-          <strong class="mr-4 text-sm">solid-kit · Solid 2.0</strong>
+          <strong class="mr-4 text-sm">solidx · Solid 2.0</strong>
           <nav class="flex gap-1" aria-label="Areas">
             <For each={pages}>
               {(name) => (

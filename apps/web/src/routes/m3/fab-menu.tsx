@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { FabMenuDemo } from "~/demos/m3/fab-menu";
 import source from "~/demos/m3/fab-menu.tsx?raw";
 
-const snippet = `import { FabMenu, FabMenuContent, FabMenuItem, FabMenuTrigger } from "@solid-kit/kit/m3";
+const snippet = `import { FabMenu, FabMenuContent, FabMenuItem, FabMenuTrigger } from "@solidx/kit/m3";
 
 <FabMenu color="primary">
   <FabMenuTrigger aria-label="Create"><AddIcon /></FabMenuTrigger>

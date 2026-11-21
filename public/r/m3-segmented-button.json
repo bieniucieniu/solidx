@@ -4,7 +4,7 @@
   "title": "M3 Segmented button",
   "description": "Segmented button. Styled wrapper around @kobalte/core/toggle-group.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/segmented-button.tsx",

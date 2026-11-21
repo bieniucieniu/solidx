@@ -1,4 +1,4 @@
-import { FabMenu, FabMenuContent, FabMenuItem, FabMenuTrigger } from "@solid-kit/kit/m3";
+import { FabMenu, FabMenuContent, FabMenuItem, FabMenuTrigger } from "@solidx/kit/m3";
 import { AddIcon, EditIcon, MailIcon, PersonIcon } from "./shared";
 
 export function FabMenuDemo() {

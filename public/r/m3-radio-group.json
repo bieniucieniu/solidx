@@ -4,7 +4,7 @@
   "title": "M3 Radio group",
   "description": "Radio group. Styled wrapper around @kobalte/core/radio-group.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/radio-group.tsx",

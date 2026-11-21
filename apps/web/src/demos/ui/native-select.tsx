@@ -1,4 +1,4 @@
-import { NativeSelect } from "@solid-kit/kit/ui";
+import { NativeSelect } from "@solidx/kit/ui";
 import { createSignal, For } from "solid-js";
 import { VariantRow } from "~/components/preview";
 

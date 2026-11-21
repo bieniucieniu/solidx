@@ -3,7 +3,7 @@
   "name": "empty",
   "title": "Empty",
   "description": "Empty state with header, title, description, and content.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/empty.tsx",
