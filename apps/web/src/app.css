@@ -9,9 +9,11 @@
 }
 
 @layer base {
-  html {
-    background: var(--background);
-    color: var(--foreground);
+  /* The M3 window background, over the ui theme's body colors. */
+  html,
+  body {
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
   }
 
   html.dark {
@@ -23,6 +25,15 @@
     min-height: 100vh;
     font-family: ui-sans-serif, system-ui, sans-serif;
   }
+}
+
+/*
+ * The app chrome (app bar, rail, navigation bar) is M3 on every page. `data-m3` would switch
+ * primary / secondary to M3 for the whole page, including the ui demos, so map them here only.
+ */
+.m3-chrome {
+  --primary: var(--md-sys-color-primary);
+  --secondary: var(--md-sys-color-secondary);
 }
 
 .tiptap-editor {
