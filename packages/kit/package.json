@@ -1,8 +1,8 @@
 {
-  "name": "@solid-kit/kit",
+  "name": "@solidx/kit",
   "version": "0.0.1",
   "private": true,
-  "description": "Solid 2.0 rewrite of the solid-kit packages: ui and m3 on @ui-sdk/solid, plus motion, xyflow, and tiptap.",
+  "description": "Solid 2.0 rewrite of the solidx packages: ui and m3 on @ui-sdk/solid, plus motion, xyflow, and tiptap.",
   "files": [
     "src"
   ],

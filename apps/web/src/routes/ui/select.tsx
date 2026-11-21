@@ -9,7 +9,7 @@ const snippet = `import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Select value={fruit()} onValueChange={(next) => setFruit(next)} placeholder="Pick a fruit">
   <SelectLabel>Fruit</SelectLabel>

@@ -5,7 +5,7 @@ import {
   InputChip,
   InputChipRemove,
   SuggestionChip,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { createSignal, For } from "solid-js";
 import { DemoRow, DemoStack, PersonIcon, StarIcon } from "./shared";
 

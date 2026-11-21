@@ -1,4 +1,4 @@
-import { Input, InputControl, InputDescription, InputLabel } from "@solid-kit/kit/ui";
+import { Input, InputControl, InputDescription, InputLabel } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function InputDemo() {

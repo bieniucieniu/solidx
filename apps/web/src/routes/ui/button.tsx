@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ButtonDemo } from "~/demos/ui/button";
 import source from "~/demos/ui/button.tsx?raw";
 
-const snippet = `import { Button } from "@solid-kit/kit/ui";
+const snippet = `import { Button } from "@solidx/kit/ui";
 
 // variant: "default" | "secondary" | "outline" | "ghost" | "destructive" | "link"
 // size: "xs" | "sm" | "default" | "lg" | "icon-xs" | "icon-sm" | "icon" | "icon-lg"

@@ -8,7 +8,7 @@ const snippet = `import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <Breadcrumb>
   <BreadcrumbList>

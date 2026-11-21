@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SwitchDemo } from "~/demos/ui/switch";
 import source from "~/demos/ui/switch.tsx?raw";
 
-const snippet = `import { Switch, SwitchLabel } from "@solid-kit/kit/ui";
+const snippet = `import { Switch, SwitchLabel } from "@solidx/kit/ui";
 
 // size: "sm" | "default"
 <SwitchLabel>

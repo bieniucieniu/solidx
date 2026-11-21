@@ -3,7 +3,7 @@
   "name": "spinner",
   "title": "Spinner",
   "description": "Spinner. Styled HTML.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/spinner.tsx",

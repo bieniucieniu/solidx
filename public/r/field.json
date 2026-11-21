@@ -3,7 +3,7 @@
   "name": "field",
   "title": "Field",
   "description": "Field with label, description, and error around a control.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/field.tsx",

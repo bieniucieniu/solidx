@@ -17,7 +17,7 @@ import {
   TextFieldContainer,
   TextFieldInput,
   TextFieldLabel,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { CloseIcon, DeleteIcon } from "./shared";
 
 export function DialogDemo() {

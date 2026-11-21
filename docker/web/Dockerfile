@@ -10,7 +10,7 @@
 #   1) pnpm install (package manifests + lockfile)
 #   2) build web → apps/web/dist
 #
-#   docker build -f docker/web/Dockerfile -t solid-kit-web .
+#   docker build -f docker/web/Dockerfile -t solidx-web .
 
 ARG NODE_IMAGE=node:24-alpine
 
@@ -35,11 +35,11 @@ RUN pnpm --filter web build
 FROM ${NODE_IMAGE} AS runtime
 WORKDIR /app
 
-RUN addgroup -S solidkit && adduser -S -G solidkit -H -s /sbin/nologin solidkit
+RUN addgroup -S solidx && adduser -S -G solidx -H -s /sbin/nologin solidx
 
-COPY --from=build --chown=solidkit:solidkit /workspace/apps/web/dist ./dist
+COPY --from=build --chown=solidx:solidx /workspace/apps/web/dist ./dist
 
-USER solidkit
+USER solidx
 EXPOSE 8080
 
 ENV NODE_ENV=production \

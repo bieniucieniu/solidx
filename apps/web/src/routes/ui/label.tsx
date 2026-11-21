@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { LabelDemo } from "~/demos/ui/label";
 import source from "~/demos/ui/label.tsx?raw";
 
-const snippet = `import { Label } from "@solid-kit/kit/ui";
+const snippet = `import { Label } from "@solidx/kit/ui";
 
 <Label for="name">Name</Label>`;
 

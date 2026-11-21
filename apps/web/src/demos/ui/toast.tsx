@@ -1,4 +1,4 @@
-import { Button, ToastRegion, toast } from "@solid-kit/kit/ui";
+import { Button, ToastRegion, toast } from "@solidx/kit/ui";
 
 export function ToastDemo() {
   return (

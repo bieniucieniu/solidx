@@ -3,7 +3,7 @@
   "name": "card",
   "title": "Card",
   "description": "Card with header, title, description, content, and footer.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/card.tsx",

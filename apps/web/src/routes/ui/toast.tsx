@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { ToastDemo } from "~/demos/ui/toast";
 import source from "~/demos/ui/toast.tsx?raw";
 
-const snippet = `import { ToastRegion, toast } from "@solid-kit/kit/ui";
+const snippet = `import { ToastRegion, toast } from "@solidx/kit/ui";
 
 // Mount once, near the app root.
 <ToastRegion />

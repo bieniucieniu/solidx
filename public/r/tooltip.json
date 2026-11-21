@@ -4,7 +4,7 @@
   "title": "Tooltip",
   "description": "Tooltip. Styled wrapper around @corvu/tooltip.",
   "dependencies": ["@corvu/tooltip"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/tooltip.tsx",

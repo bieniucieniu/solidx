@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { CollapsibleDemo } from "~/demos/ui/collapsible";
 import source from "~/demos/ui/collapsible.tsx?raw";
 
-const snippet = `import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@solid-kit/kit/ui";
+const snippet = `import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@solidx/kit/ui";
 
 <Collapsible>
   <CollapsibleTrigger>Show notes</CollapsibleTrigger>

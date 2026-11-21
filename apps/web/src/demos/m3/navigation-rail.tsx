@@ -7,7 +7,7 @@ import {
   NavigationRailIcon,
   NavigationRailItem,
   NavigationRailLabel,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { type JSX } from "@solidjs/web";
 import { createSignal, For, Show } from "solid-js";
 import { EditIcon, HomeIcon, MailIcon, MenuIcon, PersonIcon, StarIcon } from "./shared";

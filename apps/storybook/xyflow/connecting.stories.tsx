@@ -1,15 +1,9 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import { Button, ButtonGroup, ButtonGroupText } from "@solid-kit/kit-1.9/ui";
-import {
-  Flow,
-  Position,
-  createFlow,
-  type FlowEdge,
-  type FlowNode,
-} from "@solid-kit/kit-1.9/xyflow";
-import { Background, Controls } from "@solid-kit/kit-1.9/xyflow/panels";
+import { Button, ButtonGroup, ButtonGroupText } from "@solidx/kit-1.9/ui";
+import { Flow, Position, createFlow, type FlowEdge, type FlowNode } from "@solidx/kit-1.9/xyflow";
+import { Background, Controls } from "@solidx/kit-1.9/xyflow/panels";
 import { createSignal } from "solid-js";
-import "@solid-kit/kit-1.9/xyflow/style.css";
+import "@solidx/kit-1.9/xyflow/style.css";
 
 const meta = {
   title: "Xyflow/Connecting",

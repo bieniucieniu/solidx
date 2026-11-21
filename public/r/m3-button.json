@@ -4,7 +4,7 @@
   "title": "M3 Button",
   "description": "Expressive button: elevated, filled, tonal, outlined, text; sizes xs to xl; round or square; toggle variant.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/button.tsx",

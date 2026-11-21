@@ -4,7 +4,7 @@
   "title": "M3 Tooltip",
   "description": "Plain tooltip (@corvu/tooltip) and rich tooltip (@kobalte/core/hover-card).",
   "dependencies": ["@corvu/tooltip", "@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/tooltip.tsx",

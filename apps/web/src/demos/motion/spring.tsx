@@ -1,5 +1,5 @@
-import { MotionConfig, motion, useMotionValue, useSpring } from "@solid-kit/kit/motion";
-import { Button } from "@solid-kit/kit/m3";
+import { MotionConfig, motion, useMotionValue, useSpring } from "@solidx/kit/motion";
+import { Button } from "@solidx/kit/m3";
 
 export default function SpringDemo() {
   const x = useMotionValue(0);

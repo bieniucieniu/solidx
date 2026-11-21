@@ -4,7 +4,7 @@ import source from "~/demos/tiptap/menus.tsx?raw";
 
 const MenusEditor = clientOnly(() => import("~/demos/tiptap/menus"));
 
-const snippet = `import { BubbleMenu, FloatingMenu } from "@solid-kit/kit/tiptap/menus";
+const snippet = `import { BubbleMenu, FloatingMenu } from "@solidx/kit/tiptap/menus";
 
 <BubbleMenu editor={editor()}>B</BubbleMenu>
 <FloatingMenu editor={editor()}>H1</FloatingMenu>`;

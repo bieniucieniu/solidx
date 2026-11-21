@@ -3,7 +3,7 @@
   "name": "button",
   "title": "Button",
   "description": "Button with shadcn variants (default, outline, secondary, ghost, destructive, link) and sizes.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/ui/button.tsx",

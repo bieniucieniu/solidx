@@ -5,7 +5,7 @@ import {
   ToggleButton,
   ToggleIconButton,
   type ButtonSize,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { createSignal, For } from "solid-js";
 import { DemoRow, DemoStack, FavoriteIcon, ShareIcon, StarIcon } from "./shared";
 

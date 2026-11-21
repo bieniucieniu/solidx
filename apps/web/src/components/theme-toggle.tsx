@@ -7,13 +7,13 @@ import {
   MenuRadioItem,
   MenuTrigger,
   iconButtonVariants,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { For, createSignal } from "solid-js";
 
 type Theme = "light" | "dark";
 type ThemePreference = Theme | "system";
 
-export const THEME_STORAGE_KEY = "solid-kit-theme";
+export const THEME_STORAGE_KEY = "solidx-theme";
 
 // Runs in <head> before paint, so the first frame already has the right theme.
 // Anything other than "light" / "dark" (missing, "system") follows the OS setting.

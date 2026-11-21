@@ -10,7 +10,7 @@ const snippet = `import {
   FieldLabel,
   FieldLegend,
   FieldSet,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 // orientation: "vertical" | "horizontal" | "responsive"
 <FieldSet>

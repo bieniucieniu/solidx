@@ -6,7 +6,7 @@ import {
   PopoverDescription,
   PopoverLabel,
   PopoverTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function PopoverDemo() {
   return (

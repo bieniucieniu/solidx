@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { TextareaDemo } from "~/demos/ui/textarea";
 import source from "~/demos/ui/textarea.tsx?raw";
 
-const snippet = `import { Textarea, TextareaControl, TextareaDescription, TextareaLabel } from "@solid-kit/kit/ui";
+const snippet = `import { Textarea, TextareaControl, TextareaDescription, TextareaLabel } from "@solidx/kit/ui";
 
 <Textarea>
   <TextareaLabel>Bio</TextareaLabel>

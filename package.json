@@ -1,5 +1,5 @@
 {
-  "name": "solid-kit",
+  "name": "solidx",
   "version": "0.0.1",
   "private": true,
   "description": "SolidJS packages. Libraries live under packages/, apps under apps/.",

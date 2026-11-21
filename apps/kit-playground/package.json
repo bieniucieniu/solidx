@@ -2,7 +2,7 @@
   "name": "kit-playground",
   "version": "0.0.1",
   "private": true,
-  "description": "Client-only Solid 2.0 playground for @solid-kit/kit.",
+  "description": "Client-only Solid 2.0 playground for @solidx/kit.",
   "type": "module",
   "scripts": {
     "dev": "vp dev",
@@ -10,8 +10,8 @@
     "typecheck": "tsc -p . --noEmit"
   },
   "dependencies": {
-    "@solid-kit/kit": "workspace:*",
     "@solidjs/web": "^2.0.3",
+    "@solidx/kit": "workspace:*",
     "@tiptap/core": "^3.35.0",
     "@tiptap/extension-bubble-menu": "^3.35.0",
     "@tiptap/extension-floating-menu": "^3.35.0",

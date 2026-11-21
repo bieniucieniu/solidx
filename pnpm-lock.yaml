@@ -197,12 +197,12 @@ importers:
 
   apps/kit-playground:
     dependencies:
-      '@solid-kit/kit':
-        specifier: workspace:*
-        version: link:../../packages/kit
       '@solidjs/web':
         specifier: ^2.0.3
         version: 2.0.3(solid-js@2.0.3)
+      '@solidx/kit':
+        specifier: workspace:*
+        version: link:../../packages/kit
       '@tiptap/core':
         specifier: ^3.35.0
         version: 3.35.0(@tiptap/pm@3.35.0)
@@ -246,7 +246,7 @@ importers:
 
   apps/storybook:
     dependencies:
-      '@solid-kit/kit-1.9':
+      '@solidx/kit-1.9':
         specifier: workspace:*
         version: link:../../packages/1.9
       '@tiptap/core':
@@ -301,15 +301,15 @@ importers:
 
   apps/web:
     dependencies:
-      '@solid-kit/kit':
-        specifier: workspace:*
-        version: link:../../packages/kit
       '@solidjs/router':
         specifier: 2.0.1
         version: 2.0.1(@solidjs/web@2.0.3(solid-js@2.0.3))(filesystem-routing@0.5.0(@voidzero-dev/vite-plus-core@8.3.8000(@volar/typescript@2.4.30(typescript@7.0.2))(esbuild@0.28.2)(jiti@2.7.0)(typescript@7.0.2)))(solid-js@2.0.3)
       '@solidjs/web':
         specifier: ^2.0.3
         version: 2.0.3(solid-js@2.0.3)
+      '@solidx/kit':
+        specifier: workspace:*
+        version: link:../../packages/kit
       '@tiptap/core':
         specifier: ^3.35.0
         version: 3.35.0(@tiptap/pm@3.35.0)

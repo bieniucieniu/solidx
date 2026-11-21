@@ -4,7 +4,7 @@ import {
   AccordionHeader,
   AccordionItem,
   AccordionTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function AccordionDemo() {
   return (

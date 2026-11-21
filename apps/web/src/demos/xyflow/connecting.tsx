@@ -1,8 +1,8 @@
-import { Button, ButtonGroup, Toolbar } from "@solid-kit/kit/m3";
-import { Flow, Position, createFlow, type FlowEdge, type FlowNode } from "@solid-kit/kit/xyflow";
-import { Background, Controls } from "@solid-kit/kit/xyflow/panels";
+import { Button, ButtonGroup, Toolbar } from "@solidx/kit/m3";
+import { Flow, Position, createFlow, type FlowEdge, type FlowNode } from "@solidx/kit/xyflow";
+import { Background, Controls } from "@solidx/kit/xyflow/panels";
 import { createSignal } from "solid-js";
-import "@solid-kit/kit/xyflow/style.css";
+import "@solidx/kit/xyflow/style.css";
 
 const side = { sourcePosition: Position.Right, targetPosition: Position.Left };
 

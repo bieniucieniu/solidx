@@ -9,7 +9,7 @@ import {
   DrawerLabel,
   DrawerOverlay,
   DrawerTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function DrawerDemo() {
   return (

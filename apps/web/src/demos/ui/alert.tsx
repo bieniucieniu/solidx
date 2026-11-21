@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@solid-kit/kit/ui";
+import { Alert, AlertDescription, AlertTitle } from "@solidx/kit/ui";
 
 export function AlertDemo() {
   return (

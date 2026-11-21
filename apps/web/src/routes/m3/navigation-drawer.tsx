@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { NavigationDrawerDemo } from "~/demos/m3/navigation-drawer";
 import source from "~/demos/m3/navigation-drawer.tsx?raw";
 
-const snippet = `import { NavigationDrawer, NavigationDrawerHeadline, NavigationDrawerItem, NavigationDrawerItemBadge, NavigationDrawerItemLabel } from "@solid-kit/kit/m3";
+const snippet = `import { NavigationDrawer, NavigationDrawerHeadline, NavigationDrawerItem, NavigationDrawerItemBadge, NavigationDrawerItemLabel } from "@solidx/kit/m3";
 
 <NavigationDrawer>
   <NavigationDrawerHeadline>Mail</NavigationDrawerHeadline>

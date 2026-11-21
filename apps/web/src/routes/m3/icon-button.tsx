@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { IconButtonDemo } from "~/demos/m3/icon-button";
 import source from "~/demos/m3/icon-button.tsx?raw";
 
-const snippet = `import { IconButton, ToggleIconButton } from "@solid-kit/kit/m3";
+const snippet = `import { IconButton, ToggleIconButton } from "@solidx/kit/m3";
 
 // variant: "standard" | "filled" | "tonal" | "outlined"
 // size: "xs" | "sm" | "md" | "lg" | "xl"; width: "narrow" | "default" | "wide"

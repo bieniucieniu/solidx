@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxLabel } from "@solid-kit/kit/ui";
+import { Checkbox, CheckboxLabel } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 export function CheckboxDemo() {

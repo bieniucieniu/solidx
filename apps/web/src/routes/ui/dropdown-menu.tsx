@@ -9,7 +9,7 @@ const snippet = `import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <DropdownMenu>
   <DropdownMenuTrigger class={buttonVariants()}>Open</DropdownMenuTrigger>

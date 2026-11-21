@@ -9,7 +9,7 @@ import {
   AlertDialogOverlay,
   AlertDialogTrigger,
   buttonVariants,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { For } from "solid-js";
 
 const sizes = ["default", "sm"] as const;

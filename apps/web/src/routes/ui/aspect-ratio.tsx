@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { AspectRatioDemo } from "~/demos/ui/aspect-ratio";
 import source from "~/demos/ui/aspect-ratio.tsx?raw";
 
-const snippet = `import { AspectRatio } from "@solid-kit/kit/ui";
+const snippet = `import { AspectRatio } from "@solidx/kit/ui";
 
 <AspectRatio ratio="16 / 9">16 / 9</AspectRatio>`;
 

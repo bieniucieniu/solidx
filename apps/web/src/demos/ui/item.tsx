@@ -6,7 +6,7 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { For } from "solid-js";
 import { VariantRow, VariantStack } from "~/components/preview";
 
@@ -42,7 +42,7 @@ export function ItemDemo() {
                 <img src="https://github.com/solidjs.png" alt="Solid" />
               </ItemMedia>
               <ItemContent>
-                <ItemTitle>solid-kit</ItemTitle>
+                <ItemTitle>solidx</ItemTitle>
               </ItemContent>
             </Item>
           </VariantRow>

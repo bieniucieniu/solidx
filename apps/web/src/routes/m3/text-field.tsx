@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { TextFieldDemo } from "~/demos/m3/text-field";
 import source from "~/demos/m3/text-field.tsx?raw";
 
-const snippet = `import { TextField, TextFieldContainer, TextFieldDescription, TextFieldInput, TextFieldLabel } from "@solid-kit/kit/m3";
+const snippet = `import { TextField, TextFieldContainer, TextFieldDescription, TextFieldInput, TextFieldLabel } from "@solidx/kit/m3";
 
 // variant: "filled" | "outlined". Pass \`invalid\` or \`disabled\` on TextField; the value goes on
 // TextFieldInput.

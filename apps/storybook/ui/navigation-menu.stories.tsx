@@ -6,7 +6,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuTrigger,
-} from "@solid-kit/kit-1.9/ui";
+} from "@solidx/kit-1.9/ui";
 
 const meta = {
   title: "UI/NavigationMenu",
@@ -21,7 +21,7 @@ export const Default: Story = {
 };
 
 const gettingStarted = [
-  { title: "Introduction", href: "/", description: "What solid-kit is and how the packages fit." },
+  { title: "Introduction", href: "/", description: "What solidx is and how the packages fit." },
   { title: "Installation", href: "/ui", description: "Add components with the shadcn CLI." },
   { title: "Theming", href: "/ui", description: "CSS variables, dark mode, and radius tokens." },
   { title: "Registry", href: "/ui", description: "Copy the source into your own project." },
@@ -37,12 +37,12 @@ const components = [
 
 const packages = [
   {
-    title: "@solid-kit/kit-1.9/ui",
+    title: "@solidx/kit-1.9/ui",
     href: "/ui",
     description: "shadcn-style components on Kobalte.",
   },
   {
-    title: "@solid-kit/kit-1.9/tiptap",
+    title: "@solidx/kit-1.9/tiptap",
     href: "/",
     description: "Tiptap editor bindings for Solid.",
   },
@@ -87,7 +87,7 @@ function NavigationMenuDemo() {
             </For>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuTrigger href="https://github.com/bieniucieniu/solid-kit">
+        <NavigationMenuTrigger href="https://github.com/bieniucieniu/solidx">
           GitHub
         </NavigationMenuTrigger>
       </NavigationMenu>

@@ -7,7 +7,7 @@ import {
   DialogLabel,
   DialogOverlay,
   DialogTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function DialogDemo() {
   return (

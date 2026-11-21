@@ -4,7 +4,7 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function BreadcrumbDemo() {
   return (

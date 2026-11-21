@@ -4,7 +4,7 @@ import source from "~/demos/motion/animate.tsx?raw";
 
 const AnimateDemo = clientOnly(() => import("~/demos/motion/animate"));
 
-const snippet = `import { motion } from "@solid-kit/kit/motion";
+const snippet = `import { motion } from "@solidx/kit/motion";
 
 <motion.div animate={{ x: 80 }} />`;
 

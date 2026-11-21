@@ -11,7 +11,7 @@ const snippet = `import {
   CodeBlockLine,
   CodeBlockTitle,
   createHighlightedCode,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { For } from "solid-js";
 
 // CodeBlock variant: "default" | "destructive"   size: "default" | "sm"

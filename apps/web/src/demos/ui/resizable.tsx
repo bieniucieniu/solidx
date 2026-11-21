@@ -1,4 +1,4 @@
-import { Resizable, ResizableHandle, ResizablePanel } from "@solid-kit/kit/ui";
+import { Resizable, ResizableHandle, ResizablePanel } from "@solidx/kit/ui";
 
 export function ResizableDemo() {
   return (

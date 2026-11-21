@@ -29,9 +29,9 @@ concurrency:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE: solid-kit/web
+  IMAGE: solidx/web
   DOCKERFILE: docker/web/Dockerfile
-  CACHE_SCOPE: solid-kit-web
+  CACHE_SCOPE: solidx-web
 
 permissions:
   contents: read

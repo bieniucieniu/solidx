@@ -4,7 +4,7 @@
   "title": "M3 Search",
   "description": "Search bar with docked results. Styled wrapper around @kobalte/core/search.",
   "dependencies": ["@kobalte/core"],
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/search.tsx",

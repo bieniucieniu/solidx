@@ -5,7 +5,7 @@ import {
   MenubarMenu,
   MenubarSeparator,
   MenubarTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 export function MenubarDemo() {
   return (

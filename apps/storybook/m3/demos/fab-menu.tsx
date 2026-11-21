@@ -4,7 +4,7 @@ import {
   FabMenuItem,
   FabMenuPortal,
   FabMenuTrigger,
-} from "@solid-kit/kit-1.9/m3";
+} from "@solidx/kit-1.9/m3";
 import { AddIcon, EditIcon, MailIcon, PersonIcon } from "./shared";
 
 export function FabMenuDemo() {

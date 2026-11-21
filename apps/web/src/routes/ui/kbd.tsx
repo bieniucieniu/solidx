@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { KbdDemo } from "~/demos/ui/kbd";
 import source from "~/demos/ui/kbd.tsx?raw";
 
-const snippet = `import { Kbd } from "@solid-kit/kit/ui";
+const snippet = `import { Kbd } from "@solidx/kit/ui";
 
 <p>
   Press <Kbd>⌘</Kbd> <Kbd>K</Kbd>

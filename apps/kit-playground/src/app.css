@@ -1,7 +1,7 @@
 /* The ui theme declares `@layer ui-sdk;` first and imports Tailwind. */
-@import "@solid-kit/kit/ui/theme.css";
-@import "@solid-kit/kit/m3/tokens.css";
-@import "@solid-kit/kit/xyflow/style.css";
+@import "@solidx/kit/ui/theme.css";
+@import "@solidx/kit/m3/tokens.css";
+@import "@solidx/kit/xyflow/style.css";
 @source "../../../packages/kit/src";
 @source ".";
 

@@ -1,4 +1,4 @@
-import { buttonVariants, Tooltip, TooltipContent, TooltipTrigger } from "@solid-kit/kit/ui";
+import { buttonVariants, Tooltip, TooltipContent, TooltipTrigger } from "@solidx/kit/ui";
 
 export function TooltipDemo() {
   return (

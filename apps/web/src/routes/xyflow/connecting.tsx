@@ -4,8 +4,8 @@ import source from "~/demos/xyflow/connecting.tsx?raw";
 
 const ConnectingDemo = clientOnly(() => import("~/demos/xyflow/connecting"));
 
-const snippet = `import { Button, ButtonGroup } from "@solid-kit/kit/m3";
-import { Flow, createFlow } from "@solid-kit/kit/xyflow";
+const snippet = `import { Button, ButtonGroup } from "@solidx/kit/m3";
+import { Flow, createFlow } from "@solidx/kit/xyflow";
 
 const flow = createFlow(() => ({
   nodes: initialNodes,

@@ -1,4 +1,4 @@
-import { Calendar } from "@solid-kit/kit/ui";
+import { Calendar } from "@solidx/kit/ui";
 import { createSignal } from "solid-js";
 
 /** Today as an ISO date (`2026-11-20`), the form ui-sdk's calendar reads and writes. */

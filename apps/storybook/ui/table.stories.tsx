@@ -1,12 +1,5 @@
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@solid-kit/kit-1.9/ui";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@solidx/kit-1.9/ui";
 
 const meta = {
   title: "UI/Table",

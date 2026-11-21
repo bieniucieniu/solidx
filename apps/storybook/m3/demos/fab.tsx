@@ -1,4 +1,4 @@
-import { ExtendedFab, Fab, type FabSize, type FabVariant } from "@solid-kit/kit-1.9/m3";
+import { ExtendedFab, Fab, type FabSize, type FabVariant } from "@solidx/kit-1.9/m3";
 import { For } from "solid-js";
 import { DemoRow, DemoStack, EditIcon } from "./shared";
 

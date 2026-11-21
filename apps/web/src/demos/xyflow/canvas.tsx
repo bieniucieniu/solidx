@@ -1,6 +1,6 @@
-import { Flow, Position, createFlow } from "@solid-kit/kit/xyflow";
-import { Background, Controls } from "@solid-kit/kit/xyflow/panels";
-import "@solid-kit/kit/xyflow/style.css";
+import { Flow, Position, createFlow } from "@solidx/kit/xyflow";
+import { Background, Controls } from "@solidx/kit/xyflow/panels";
+import "@solidx/kit/xyflow/style.css";
 
 export default function CanvasDemo() {
   const flow = createFlow(() => ({

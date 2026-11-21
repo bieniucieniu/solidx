@@ -3,7 +3,7 @@
   "name": "m3-loading-indicator",
   "title": "M3 Loading indicator",
   "description": "Expressive morphing loading indicator.",
-  "registryDependencies": ["bieniucieniu/solid-kit/utils"],
+  "registryDependencies": ["bieniucieniu/solidx/utils"],
   "files": [
     {
       "path": "packages/1.9/src/components/m3/loading-indicator.tsx",

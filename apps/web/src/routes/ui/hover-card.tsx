@@ -7,7 +7,7 @@ const snippet = `import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <HoverCard>
   <HoverCardTrigger class={buttonVariants()}>Hover</HoverCardTrigger>

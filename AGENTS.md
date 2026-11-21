@@ -47,18 +47,18 @@ ai/drawer-bottom-sheet
 
 # Repository layout
 
-pnpm workspace. Root `solid-kit` is private and exports nothing. Do not re-export a package from the root. Apps live in `apps/` and are never published; libraries live in `packages/`.
+pnpm workspace. Root `solidx` is private and exports nothing. Do not re-export a package from the root. Apps live in `apps/` and are never published; libraries live in `packages/`.
 
 Packages, both with the same layout (`src/components/<area>`, `src/lib/<area>`, one subpath per area: `./ui`, `./m3`, `./motion`, `./xyflow`, `./tiptap`):
 
-- `packages/kit` (`@solid-kit/kit`) is the main package: the Solid 2.0 rewrite. Its ui-sdk and subpath rules are in [packages/kit/AGENTS.md](packages/kit/AGENTS.md).
-- `packages/1.9` (`@solid-kit/kit-1.9`) is the Solid 1.9 code, frozen. It feeds `apps/storybook` and the shadcn registry ([packages/1.9/README.md](packages/1.9/README.md)).
+- `packages/kit` (`@solidx/kit`) is the main package: the Solid 2.0 rewrite. Its ui-sdk and subpath rules are in [packages/kit/AGENTS.md](packages/kit/AGENTS.md).
+- `packages/1.9` (`@solidx/kit-1.9`) is the Solid 1.9 code, frozen. It feeds `apps/storybook` and the shadcn registry ([packages/1.9/README.md](packages/1.9/README.md)).
 
 Apps (`.claude/launch.json` starts each by its package name):
 
-- `apps/web` (`web`) is the docs site, on Solid 2.0 and `@solid-kit/kit`.
+- `apps/web` (`web`) is the docs site, on Solid 2.0 and `@solidx/kit`.
 - `apps/kit-playground` (`kit-playground`) is a client-only Solid 2.0 app that renders the kit.
-- `apps/storybook` (`storybook`) is Storybook 10 for `@solid-kit/kit-1.9`.
+- `apps/storybook` (`storybook`) is Storybook 10 for `@solidx/kit-1.9`.
 
 # Package Development: Solid 2.0 (default)
 
@@ -89,7 +89,7 @@ A component function runs once. Updates come from signals read in JSX, `createMe
 - Do not write signals inside a memo or a component body. Writes go in event handlers, actions, or an effect's apply function. Writes apply on the next microtask; do not call `flush()` inside `onSettled`.
 - A ref callback cannot create effects or call `onCleanup`. Do that work in the component body and keep the element in a variable.
 - `JSX`, `ComponentProps`, `Portal`, `dynamic`, `isServer`, `render`, `clientOnly`, `HydrationScript`, `httpStatus` come from `@solidjs/web`. `Show`, `For`, `Switch`, `Match`, `Loading`, `createSignal`, `createMemo`, `createEffect`, `createStore`, `omit`, `merge` come from `solid-js`.
-- Components come from `@solid-kit/kit/<subpath>`. Never import `@solid-kit/kit-1.9` into 2.0 code.
+- Components come from `@solidx/kit/<subpath>`. Never import `@solidx/kit-1.9` into 2.0 code.
 
 ## `apps/web`
 
@@ -102,7 +102,7 @@ A component function runs once. Updates come from signals read in JSX, `createMe
 
 # Package Development: Solid 1.9 (`packages/1.9/**`, `apps/storybook`)
 
-Peer dependency is `solid-js` `^1.9.0`. `jsxImportSource` is `solid-js`. Write Solid 1.9 only in these folders; everything else is 2.0 (above). Storybook 10 and its Solid adapter are 1.9-only, so Storybook stays on this package. Import it by subpath, `@solid-kit/kit-1.9/<area>`. Inside the package, ui and m3 import `@/lib/…` (the alias the shadcn registry ships); motion, xyflow, and tiptap import `#/…`. Do not rewrite either.
+Peer dependency is `solid-js` `^1.9.0`. `jsxImportSource` is `solid-js`. Write Solid 1.9 only in these folders; everything else is 2.0 (above). Storybook 10 and its Solid adapter are 1.9-only, so Storybook stays on this package. Import it by subpath, `@solidx/kit-1.9/<area>`. Inside the package, ui and m3 import `@/lib/…` (the alias the shadcn registry ships); motion, xyflow, and tiptap import `#/…`. Do not rewrite either.
 
 Match the public behavior of [Tiptap React](https://github.com/ueberdosis/tiptap/tree/main/packages/react). Implement it with the patterns already in `packages/1.9/src/components/tiptap` and `src/lib/tiptap`. Copying React component bodies, hooks, or JSX is a bug.
 

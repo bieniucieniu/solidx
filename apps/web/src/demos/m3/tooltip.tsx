@@ -10,7 +10,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { DemoRow, DemoStack, InfoIcon, StarIcon } from "./shared";
 
 export function TooltipDemo() {

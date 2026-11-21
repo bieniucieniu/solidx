@@ -4,7 +4,7 @@ import source from "~/demos/motion/spring.tsx?raw";
 
 const SpringDemo = clientOnly(() => import("~/demos/motion/spring"));
 
-const snippet = `import { motion, useMotionValue, useSpring } from "@solid-kit/kit/motion";
+const snippet = `import { motion, useMotionValue, useSpring } from "@solidx/kit/motion";
 
 const x = useMotionValue(0);
 const springX = useSpring(x, () => ({ stiffness: 220, damping: 18 }));

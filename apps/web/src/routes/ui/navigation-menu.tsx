@@ -8,7 +8,7 @@ const snippet = `import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuTrigger,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 
 <NavigationMenu>
   <NavigationMenuItem>
@@ -16,7 +16,7 @@ const snippet = `import {
     <NavigationMenuContent class="grid w-96 grid-cols-2 gap-1">
       <NavigationMenuLink href="/" class="flex-col items-start gap-0.5">
         <span class="font-medium">Introduction</span>
-        <span class="text-muted-foreground">What solid-kit is.</span>
+        <span class="text-muted-foreground">What solidx is.</span>
       </NavigationMenuLink>
       <NavigationMenuLink href="/ui" class="flex-col items-start gap-0.5">
         <span class="font-medium">Installation</span>
@@ -34,12 +34,12 @@ const snippet = `import {
   <NavigationMenuItem>
     <NavigationMenuTrigger>Packages</NavigationMenuTrigger>
     <NavigationMenuContent class="w-72">
-      <NavigationMenuLink href="/ui">@solid-kit/kit/ui</NavigationMenuLink>
-      <NavigationMenuLink href="/">@solid-kit/kit/tiptap</NavigationMenuLink>
+      <NavigationMenuLink href="/ui">@solidx/kit/ui</NavigationMenuLink>
+      <NavigationMenuLink href="/">@solidx/kit/tiptap</NavigationMenuLink>
     </NavigationMenuContent>
   </NavigationMenuItem>
   {/* A Trigger with href outside an Item is a plain link. */}
-  <NavigationMenuTrigger href="https://github.com/bieniucieniu/solid-kit">
+  <NavigationMenuTrigger href="https://github.com/bieniucieniu/solidx">
     GitHub
   </NavigationMenuTrigger>
 </NavigationMenu>`;

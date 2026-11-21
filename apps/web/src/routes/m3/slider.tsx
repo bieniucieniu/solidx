@@ -2,7 +2,7 @@ import { DocsPage } from "~/components/preview";
 import { SliderDemo } from "~/demos/m3/slider";
 import source from "~/demos/m3/slider.tsx?raw";
 
-const snippet = `import { Slider, SliderControl, SliderFill, SliderThumb, SliderTrack } from "@solid-kit/kit/m3";
+const snippet = `import { Slider, SliderControl, SliderFill, SliderThumb, SliderTrack } from "@solidx/kit/m3";
 
 <Slider defaultValue={40}>
   <SliderControl>

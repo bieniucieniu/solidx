@@ -1,4 +1,4 @@
-import { buttonVariants } from "@solid-kit/kit/m3";
+import { buttonVariants } from "@solidx/kit/m3";
 import { For } from "solid-js";
 import { DocsPage } from "~/components/preview";
 import type { NavItem } from "~/nav";

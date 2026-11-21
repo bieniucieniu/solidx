@@ -1,4 +1,4 @@
-import { applyScheme, Button, type SchemeVariant } from "@solid-kit/kit-1.9/m3";
+import { applyScheme, Button, type SchemeVariant } from "@solidx/kit-1.9/m3";
 import { createEffect, createSignal, For, onCleanup, onMount } from "solid-js";
 import { ButtonDemo } from "./button";
 import { DemoRow, DemoStack } from "./shared";

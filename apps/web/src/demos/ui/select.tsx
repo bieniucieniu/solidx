@@ -5,7 +5,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@solid-kit/kit/ui";
+} from "@solidx/kit/ui";
 import { createSignal, For } from "solid-js";
 
 const options = ["Apple", "Banana", "Orange"];

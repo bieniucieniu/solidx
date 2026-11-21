@@ -1,4 +1,4 @@
-import { SegmentedButton, SegmentedButtonIcon, SegmentedButtonItem } from "@solid-kit/kit-1.9/m3";
+import { SegmentedButton, SegmentedButtonIcon, SegmentedButtonItem } from "@solidx/kit-1.9/m3";
 import { createSignal } from "solid-js";
 import { DemoRow, DemoStack, HomeIcon, MailIcon, PersonIcon } from "./shared";
 

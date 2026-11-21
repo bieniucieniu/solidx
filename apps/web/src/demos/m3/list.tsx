@@ -11,7 +11,7 @@ import {
   ListItemOverline,
   ListItemSupportingText,
   ListItemTrailing,
-} from "@solid-kit/kit/m3";
+} from "@solidx/kit/m3";
 import { HomeIcon, MailIcon, PersonIcon, StarIcon } from "./shared";
 
 export function ListDemo() {
