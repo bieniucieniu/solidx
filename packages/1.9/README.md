@@ -218,7 +218,7 @@ Type styles are `typescale-*` rather than `text-*`: `tailwind-merge` reads an un
 
 ### Next to a shadcn theme
 
-`bg-primary` and `bg-secondary` read `--primary` / `--secondary`, the same variables shadcn uses. When an app also loads the `ui` theme (like this repo's web app and Storybook), import `@solidx/kit-1.9/m3/tokens.css` instead of `theme.css` and put `data-m3` on the M3 part of the page. While an element with `data-m3` is mounted, `:root:has([data-m3])` points the two variables at M3, so portals (dialogs, menus, tooltips) follow too.
+`bg-primary` and `bg-secondary` read `--primary` / `--secondary`, the same variables shadcn uses. When an app also loads the `ui` theme (like this repo's Storybook), import `@solidx/kit-1.9/m3/tokens.css` instead of `theme.css` and put `data-m3` on the M3 part of the page. While an element with `data-m3` is mounted, `:root:has([data-m3])` points the two variables at M3, so portals (dialogs, menus, tooltips) follow too.
 
 ### Dynamic color
 

@@ -12,13 +12,15 @@ The main package. It rewrites the Solid 1.9 code in `packages/1.9` (`@solidx/kit
 
 Keep each subpath's public names and props the same as its 1.9 barrel unless ui-sdk forces a change.
 
-Run tooling through devenv: `devenv shell -- vp check packages/kit`, `devenv shell -- vp test` (browser tests, Playwright chromium), and `devenv shell -- pnpm --filter @solidx/kit typecheck`.
+Run tooling through devenv: `devenv shell -- vp check packages/kit`, `devenv shell -- vp test run` in `packages/kit` (browser tests, Playwright Chromium; run `pnpm exec playwright install chromium` after a Playwright update), and `devenv shell -- pnpm --filter @solidx/kit typecheck` (TypeScript 7).
 
 ## Stack
 
 - `solid-js` and `@solidjs/web` `^2.0.3`. `jsxImportSource` is `@solidjs/web`. The Vite plugin is `@solidjs/vite-plugin`.
 - `ui` and `m3` are built on [`@ui-sdk/solid`](https://github.com/vercel-labs/ui) and `@ui-sdk/core`, pinned to one beta. Never import Kobalte or corvu. The docs ship in `node_modules/@ui-sdk/solid/docs/` (`components/<name>.md`, `styling-and-animation.md`, `popups.md`). Read the component's doc before wrapping it.
-- Internal imports use `#kit/…` (`package.json` `imports`). Shared `cn` and `partClass` live in `src/lib/utils.ts`.
+- Internal imports use `#kit/…` (`package.json` `imports`). Shared `cn` and `partClass` live in `src/lib/utils.ts`; Shiki highlighting for both code blocks is `src/lib/highlighted-code.tsx`.
+- `xyflow` is built on `@xyflow/system` 1.0. Its change helpers (`src/lib/utils/xyflow/changes.ts`) apply `select`, `position`, `dimensions`, `add`, `remove`, `replace`, `update`, and `data` changes; edges attach to the middle of a handle's outer side, as `getHandlePosition` computes.
+- `motion` takes a `ref` as a callback, a variable, or a (nested) array of them. `AnimatePresence` rows keep their key; a kept key with a new item rebuilds that row without replaying `initial`.
 
 ## Wrapping a ui-sdk part
 
