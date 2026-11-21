@@ -67,7 +67,6 @@ export function NodeView(props: { node: FlowNode; resizeObserver: ResizeObserver
         noDragClassName: "nodrag",
         handleSelector,
         isSelectable,
-        nodeClickDistance: 0,
       });
       // Runs before the next update and when dragging is turned off or the node is hidden,
       // so a node that is no longer draggable has no drag listeners left.
