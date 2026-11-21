@@ -1,16 +1,12 @@
-import type { EdgeChange, NodeChange, NodeSelectionChange } from "@xyflow/system";
+import type { EdgeChange, NodeChange, SelectionChange } from "@xyflow/system";
 import type { FlowEdge, FlowNode } from "#kit/lib/xyflow/types";
 
-function applyChanges<T extends { id: string }>(
-  changes: Array<{ id?: string; type: string; index?: number; item?: T }>,
-  elements: T[],
-): T[] {
+type ElementChange<T> = { id?: string; type: string; index?: number; item?: T | Partial<T> };
+
+function applyChanges<T extends { id: string }>(changes: ElementChange<T>[], elements: T[]): T[] {
   const updated: T[] = [];
-  const changesMap = new Map<
-    string,
-    Array<{ id?: string; type: string; index?: number; item?: T }>
-  >();
-  const additions: Array<{ id?: string; type: string; index?: number; item?: T }> = [];
+  const changesMap = new Map<string, ElementChange<T>[]>();
+  const additions: ElementChange<T>[] = [];
 
   for (const change of changes) {
     if (change.type === "add") {
@@ -35,7 +31,7 @@ function applyChanges<T extends { id: string }>(
     }
     if (elementChanges[0]?.type === "remove") continue;
     if (elementChanges[0]?.type === "replace" && elementChanges[0].item) {
-      updated.push(elementChanges[0].item);
+      updated.push(elementChanges[0].item as T);
       continue;
     }
     const next = { ...element };
@@ -45,8 +41,9 @@ function applyChanges<T extends { id: string }>(
 
   for (const change of additions) {
     if (!change.item) continue;
-    if (change.index !== undefined) updated.splice(change.index, 0, change.item);
-    else updated.push(change.item);
+    const item = change.item as T;
+    if (change.index !== undefined) updated.splice(change.index, 0, item);
+    else updated.push(item);
   }
 
   return updated;
@@ -75,6 +72,16 @@ function applyChange(
         }
       }
       break;
+    case "update":
+      // Shallow-merges a partial element (@xyflow/system 1.0 `UpdateChange`).
+      if (change.item && typeof change.item === "object") Object.assign(element, change.item);
+      break;
+    case "data":
+      // Merges into `data`, or replaces it when `replace` is set (`DataChange`).
+      element.data = change.replace
+        ? change.data
+        : { ...(element.data as object | undefined), ...(change.data as object) };
+      break;
     default:
       break;
   }
@@ -88,15 +95,15 @@ export function applyEdgeChanges(changes: EdgeChange<FlowEdge>[], edges: FlowEdg
   return applyChanges(changes, edges);
 }
 
-export function createSelectionChange(id: string, selected: boolean): NodeSelectionChange {
+export function createSelectionChange(id: string, selected: boolean): SelectionChange {
   return { id, type: "select", selected };
 }
 
 export function getSelectionChanges(
   items: Map<string, { id: string; selected?: boolean }>,
   selectedIds: Set<string> = new Set(),
-): Array<NodeSelectionChange> {
-  const changes: Array<NodeSelectionChange> = [];
+): Array<SelectionChange> {
+  const changes: Array<SelectionChange> = [];
   for (const [id, item] of items) {
     const willBeSelected = selectedIds.has(id);
     if (!(item.selected === undefined && !willBeSelected) && item.selected !== willBeSelected) {

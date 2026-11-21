@@ -359,8 +359,8 @@ export function createFlow(options: Accessor<FlowOptions> = () => ({})) {
         set({ viewport: { x: transform[0], y: transform[1], zoom: transform[2] } });
       },
       connectionInProgress: current.connection.inProgress,
-      selectionOnDrag: current.selectionOnDrag,
-      paneClickDistance: 0,
+      // Pan starts on any pointer move; drag-to-select is handled by Pane, not by XYPanZoom.
+      paneDragThreshold: 0,
     });
   }
 
