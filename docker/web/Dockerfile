@@ -29,6 +29,7 @@ RUN pnpm install --frozen-lockfile --filter web...
 
 # --- 2. Build web (invalidates when sources change) ---
 COPY packages/kit ./packages/kit
+COPY packages/excalidraw ./packages/excalidraw
 COPY apps/web ./apps/web
 RUN pnpm --filter web build
 
