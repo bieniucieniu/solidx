@@ -10,7 +10,7 @@ import {
   type ExcalidrawInstance,
 } from "#ex/index";
 import { useExcalidraw } from "#ex/solid/context";
-import { convertToExcalidrawElements } from "#ex/core";
+import { convertToExcalidrawElements, FONT_FAMILY, Fonts, loadLanguage, t } from "#ex/core";
 import type { ExcalidrawImperativeAPI, ExcalidrawProps } from "#ex/core";
 import "#ex/style.css";
 
@@ -227,6 +227,32 @@ describe("<Excalidraw>", () => {
     expect(png.size).toBeGreaterThan(0);
     const svg = await probe().exporter.toSvg({ dark: true });
     expect(svg.querySelector("path, rect")).toBeTruthy();
+  });
+
+  test("the fonts prop registers the host's font files", async () => {
+    const { probe } = mount({
+      fonts: { Virgil: [{ url: "/fonts/virgil-test.woff2", unicodeRange: "U+20-7E" }] },
+    });
+    await expect.poll(() => !!probe().excalidraw.app.renderResult).toBe(true);
+    const faces = Fonts.registered.get(FONT_FAMILY.Virgil)?.fontFaces ?? [];
+    expect(faces.map((face) => face.urls.map(String))).toEqual([
+      [new URL("/fonts/virgil-test.woff2", document.baseURI).href],
+    ]);
+    expect(faces[0]!.fontFace.unicodeRange).toBe("U+20-7E");
+    // no files bundled: a family the host didn't register has none
+    expect(Fonts.registered.get(FONT_FAMILY["Lilita One"])).toBeUndefined();
+  });
+
+  test("locales loads the host's language for langCode", async () => {
+    const { probe } = mount({
+      langCode: "de-DE",
+      locales: { "de-DE": async () => ({ labels: { selectAll: "Alles auswählen" } }) },
+    });
+    await expect.poll(() => !!probe().excalidraw.app.renderResult).toBe(true);
+    expect(t("labels.selectAll")).toBe("Alles auswählen");
+    // keys the locale lacks fall back to English
+    expect(t("labels.copy")).toBe("Copy");
+    await loadLanguage("en");
   });
 
   test("unmounting removes the canvas layers", async () => {

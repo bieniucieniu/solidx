@@ -23,7 +23,7 @@ export function Excalidraw(props: ExcalidrawRootProps) {
 
   // upstream `InitializeApp`: the editor renders once its language is loaded
   const [ready, setReady] = createSignal(false);
-  void loadLanguage(props.langCode).then(() => setReady(true));
+  void loadLanguage(props.langCode, props.locales).then(() => setReady(true));
 
   let container: HTMLDivElement | undefined;
   let canvasHost: HTMLDivElement | undefined;

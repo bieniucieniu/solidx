@@ -69,7 +69,8 @@ import type { SnapLine } from "./snapping";
 import type { ImportedDataState } from "./data/types";
 import type { SetViewportOptions } from "./viewport";
 
-import type { Language } from "./i18n";
+import type { ExcalidrawLocales, Language } from "./i18n";
+import type { ExcalidrawFonts } from "./fonts/Fonts";
 import type { isOverScrollBars } from "./scene/scrollbars";
 
 export type { App };
@@ -993,6 +994,16 @@ export interface ExcalidrawProps {
     appState: UIAppState,
   ) => UINode | null;
   langCode?: Language["code"];
+  /**
+   * The host's languages by code; only English is bundled. `langCode` picks
+   * one, e.g. `{ "de-DE": () => import("./locales/de-DE.json") }`.
+   */
+  locales?: ExcalidrawLocales;
+  /**
+   * The host's font files per family; the package bundles none, and a family
+   * without files renders with its CSS fallbacks. See `registerFonts`.
+   */
+  fonts?: ExcalidrawFonts;
   viewModeEnabled?: boolean;
   /**
    * Whether the editor accepts user input (pointer, keyboard, wheel, touch,

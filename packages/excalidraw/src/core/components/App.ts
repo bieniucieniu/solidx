@@ -302,7 +302,7 @@ import {
   getElementRenderOffsets,
 } from "../renderOverrides";
 import { History } from "../history";
-import { defaultLang, languages, setLanguage, t } from "../i18n";
+import { resolveLanguage, setLanguage, t } from "../i18n";
 
 import {
   getScrollToContentState,
@@ -10639,10 +10639,11 @@ class App extends AppBase<AppProps, AppState, AppRenderResult> {
   watchState = () => {};
 
   private async updateLanguage() {
-    const currentLang =
-      languages.find((lang) => lang.code === this.props.langCode) ||
-      defaultLang;
-    await setLanguage(currentLang);
+    const { langCode, locales } = this.props;
+    await setLanguage(
+      resolveLanguage(langCode),
+      langCode ? locales?.[langCode] : undefined,
+    );
     this.setAppState({});
   }
 }

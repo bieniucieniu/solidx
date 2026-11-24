@@ -10,16 +10,17 @@ import {
   useTool,
 } from "@solidx/excalidraw";
 import type { PropertyName } from "@solidx/excalidraw/core";
+import { fonts } from "./fonts";
 import {
-  HamburgerMenuIcon,
-  LockedIcon,
+  LockIcon,
+  LockOpenIcon,
+  MenuIcon,
   RedoIcon,
   TOOL_ICONS,
   UndoIcon,
-  UnlockedIcon,
   ZoomInIcon,
   ZoomOutIcon,
-} from "@solidx/excalidraw/icons";
+} from "./icons";
 import "@solidx/excalidraw/style.css";
 import {
   Button,
@@ -72,7 +73,7 @@ function Toolbar() {
         pressed={tool.locked()}
         onPressedChange={() => tool.toggleLock()}
       >
-        {tool.locked() ? <LockedIcon class="size-4" /> : <UnlockedIcon class="size-4" />}
+        {tool.locked() ? <LockIcon class="size-4" /> : <LockOpenIcon class="size-4" />}
       </Toggle>
       <Separator orientation="vertical" class="h-5" />
       <ToggleGroup
@@ -85,7 +86,7 @@ function Toolbar() {
       >
         <For each={TOOLBAR}>
           {(item) => {
-            const Icon = TOOL_ICONS[item.type as keyof typeof TOOL_ICONS]!;
+            const Icon = TOOL_ICONS[item.type]!;
             return (
               <ToggleGroupItem
                 value={item.type}
@@ -298,7 +299,7 @@ function MainMenu() {
         class={cn(island, buttonVariants({ variant: "ghost", size: "icon" }), "shrink-0")}
         aria-label="Menu"
       >
-        <HamburgerMenuIcon class="size-4" />
+        <MenuIcon class="size-4" />
       </DropdownMenuTrigger>
       <DropdownMenuContent class="pointer-events-auto min-w-52">
         <MenuAction name="loadScene" />
@@ -363,7 +364,7 @@ function ContextMenu() {
 export default function ExcalidrawUiDemo() {
   return (
     <div class="h-[640px] overflow-hidden rounded-lg border">
-      <Excalidraw>
+      <Excalidraw fonts={fonts}>
         <div class="flex h-full flex-col justify-between p-3">
           <div class="flex items-start justify-between gap-3">
             <MainMenu />

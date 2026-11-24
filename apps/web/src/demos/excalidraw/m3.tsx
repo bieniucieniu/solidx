@@ -10,16 +10,17 @@ import {
   useTool,
 } from "@solidx/excalidraw";
 import type { PropertyName } from "@solidx/excalidraw/core";
+import { fonts } from "./fonts";
 import {
-  HamburgerMenuIcon,
-  LockedIcon,
+  LockIcon,
+  LockOpenIcon,
+  MenuIcon,
   RedoIcon,
   TOOL_ICONS,
   UndoIcon,
-  UnlockedIcon,
   ZoomInIcon,
   ZoomOutIcon,
-} from "@solidx/excalidraw/icons";
+} from "./icons";
 import "@solidx/excalidraw/style.css";
 import {
   Card,
@@ -69,11 +70,11 @@ function Tools() {
           pressed={tool.locked()}
           onPressedChange={() => tool.toggleLock()}
         >
-          {tool.locked() ? <LockedIcon class="size-5" /> : <UnlockedIcon class="size-5" />}
+          {tool.locked() ? <LockIcon class="size-5" /> : <LockOpenIcon class="size-5" />}
         </ToggleIconButton>
         <For each={TOOLBAR}>
           {(item) => {
-            const Icon = TOOL_ICONS[item.type as keyof typeof TOOL_ICONS]!;
+            const Icon = TOOL_ICONS[item.type]!;
             return (
               <ToggleIconButton
                 variant="tonal"
@@ -274,7 +275,7 @@ function MainMenu() {
         aria-label="Menu"
         class={iconButtonVariants({ variant: "tonal", class: "pointer-events-auto shrink-0" })}
       >
-        <HamburgerMenuIcon class="size-5" />
+        <MenuIcon class="size-5" />
       </MenuTrigger>
       <MenuContent class="pointer-events-auto">
         <MenuAction name="loadScene" />
@@ -338,7 +339,7 @@ function ContextMenu() {
 export default function ExcalidrawM3Demo() {
   return (
     <div class="h-[640px] overflow-hidden rounded-large border border-outline-variant">
-      <Excalidraw>
+      <Excalidraw fonts={fonts}>
         <div class="flex h-full flex-col justify-between p-3">
           <div class="flex items-start justify-between gap-3">
             <MainMenu />

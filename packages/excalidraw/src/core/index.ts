@@ -49,12 +49,17 @@ export { isInvisiblySmallElement } from "@excalidraw/element";
 
 export {
   defaultLang,
-  languages,
+  resolveLanguage,
   t,
   getLangCode,
   subscribeLangCode,
 } from "./i18n";
-export type { Language } from "./i18n";
+export type {
+  ExcalidrawLocales,
+  Language,
+  LocaleData,
+  LocaleLoader,
+} from "./i18n";
 export {
   restoreAppState,
   restoreElement,
@@ -128,7 +133,16 @@ export {
 export { elementsOverlappingBBox } from "@excalidraw/element";
 export { isElementLink } from "@excalidraw/element";
 
-export { Fonts } from "./fonts/Fonts";
+import { Fonts, type ExcalidrawFonts } from "./fonts/Fonts";
+
+export { Fonts };
+export type { ExcalidrawFonts, FontSource } from "./fonts/Fonts";
+export { setFontSubsetter } from "./fonts/subset";
+export type { FontSubsetter } from "./fonts/subset";
+
+/** registers the host's font files (what the `fonts` prop does) */
+export const registerFonts = (fonts: ExcalidrawFonts) =>
+  Fonts.registerFonts(fonts);
 
 export { setCustomTextMetricsProvider } from "@excalidraw/element";
 export type { RenderEnvironment } from "@excalidraw/element";

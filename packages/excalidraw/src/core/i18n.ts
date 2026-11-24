@@ -4,9 +4,6 @@ import type { NestedKeyOf } from "@excalidraw/common/utility-types";
 
 import { editorJotaiStore, atom } from "./editor-jotai";
 import fallbackLangData from "./locales/en.json";
-import percentages from "./locales/percentages.json";
-
-const COMPLETION_THRESHOLD = 85;
 
 export interface Language {
   code: string;
@@ -16,89 +13,59 @@ export interface Language {
 
 export type TranslationKeys = NestedKeyOf<typeof fallbackLangData>;
 
+/** a language's translations, in the shape of upstream's `locales/*.json` */
+export type LocaleData = Record<string, unknown>;
+
+/**
+ * Loads a language's translations, e.g. `() => import("./locales/de-DE.json")`.
+ * Only English is bundled; the host brings the others.
+ */
+export type LocaleLoader = () => Promise<LocaleData | { default: LocaleData }>;
+
+/** the host's languages, by code (`"de-DE"`, …) */
+export type ExcalidrawLocales = Record<string, LocaleLoader>;
+
 export const defaultLang = { code: "en", label: "English" };
 
-export const languages: Language[] = [
-  defaultLang,
-  ...[
-    { code: "ar-SA", label: "العربية", rtl: true },
-    { code: "bg-BG", label: "Български" },
-    { code: "ca-ES", label: "Català" },
-    { code: "cs-CZ", label: "Česky" },
-    { code: "de-DE", label: "Deutsch" },
-    { code: "el-GR", label: "Ελληνικά" },
-    { code: "es-ES", label: "Español" },
-    { code: "eu-ES", label: "Euskara" },
-    { code: "fa-IR", label: "فارسی", rtl: true },
-    { code: "fi-FI", label: "Suomi" },
-    { code: "fr-FR", label: "Français" },
-    { code: "gl-ES", label: "Galego" },
-    { code: "he-IL", label: "עברית", rtl: true },
-    { code: "hi-IN", label: "हिन्दी" },
-    { code: "hu-HU", label: "Magyar" },
-    { code: "id-ID", label: "Bahasa Indonesia" },
-    { code: "it-IT", label: "Italiano" },
-    { code: "ja-JP", label: "日本語" },
-    { code: "kab-KAB", label: "Taqbaylit" },
-    { code: "kk-KZ", label: "Қазақ тілі" },
-    { code: "ko-KR", label: "한국어" },
-    { code: "ku-TR", label: "Kurdî" },
-    { code: "lt-LT", label: "Lietuvių" },
-    { code: "lv-LV", label: "Latviešu" },
-    { code: "my-MM", label: "Burmese" },
-    { code: "nb-NO", label: "Norsk bokmål" },
-    { code: "nl-NL", label: "Nederlands" },
-    { code: "nn-NO", label: "Norsk nynorsk" },
-    { code: "oc-FR", label: "Occitan" },
-    { code: "pa-IN", label: "ਪੰਜਾਬੀ" },
-    { code: "pl-PL", label: "Polski" },
-    { code: "pt-BR", label: "Português Brasileiro" },
-    { code: "pt-PT", label: "Português" },
-    { code: "ro-RO", label: "Română" },
-    { code: "ru-RU", label: "Русский" },
-    { code: "sk-SK", label: "Slovenčina" },
-    { code: "sv-SE", label: "Svenska" },
-    { code: "sl-SI", label: "Slovenščina" },
-    { code: "tr-TR", label: "Türkçe" },
-    { code: "uk-UA", label: "Українська" },
-    { code: "zh-CN", label: "简体中文" },
-    { code: "zh-TW", label: "繁體中文" },
-    { code: "vi-VN", label: "Tiếng Việt" },
-    { code: "mr-IN", label: "मराठी" },
-  ]
-    .filter(
-      (lang) =>
-        (percentages as Record<string, number>)[lang.code] >=
-        COMPLETION_THRESHOLD,
-    )
-    .sort((left, right) => (left.label > right.label ? 1 : -1)),
-];
-
 const TEST_LANG_CODE = "__test__";
-if (isDevEnv()) {
-  languages.unshift(
-    { code: TEST_LANG_CODE, label: "test language" },
-    {
-      code: `${TEST_LANG_CODE}.rtl`,
-      label: "\u{202a}test language (rtl)\u{202c}",
-      rtl: true,
-    },
-  );
-}
+
+const RTL_LANGUAGES = ["ar", "ckb", "dv", "fa", "he", "ps", "ur", "yi"];
+
+/** the `Language` for a code (upstream kept a table; only `rtl` matters) */
+export const resolveLanguage = (code: string = defaultLang.code): Language =>
+  code === defaultLang.code
+    ? defaultLang
+    : {
+        code,
+        label: code,
+        rtl:
+          code === `${TEST_LANG_CODE}.rtl` ||
+          RTL_LANGUAGES.includes(code.split("-")[0]),
+      };
 
 let currentLang: Language = defaultLang;
-let currentLangData = {};
+let currentLangData: LocaleData = {};
 
-export const setLanguage = async (lang: Language) => {
+export const setLanguage = async (lang: Language, load?: LocaleLoader) => {
   currentLang = lang;
   document.documentElement.dir = currentLang.rtl ? "rtl" : "ltr";
   document.documentElement.lang = currentLang.code;
 
   if (lang.code.startsWith(TEST_LANG_CODE)) {
     currentLangData = {};
+  } else if (lang.code === defaultLang.code) {
+    currentLangData = fallbackLangData;
+  } else if (!load) {
+    console.warn(
+      `Excalidraw: no locale for "${lang.code}" (the \`locales\` prop); using English`,
+    );
+    currentLangData = fallbackLangData;
   } else {
     try {
-      currentLangData = await import(`./locales/${currentLang.code}.json`);
+      const data = await load();
+      currentLangData = (
+        "default" in data ? data.default : data
+      ) as LocaleData;
     } catch (error: any) {
       console.error(`Failed to load language ${lang.code}:`, error.message);
       currentLangData = fallbackLangData;

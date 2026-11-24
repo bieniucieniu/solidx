@@ -5,8 +5,9 @@ import source from "~/demos/excalidraw/m3.tsx?raw";
 const M3Demo = clientOnly(() => import("~/demos/excalidraw/m3"));
 
 const snippet = `import { Excalidraw, useProperty, useTool } from "@solidx/excalidraw";
-import { TOOL_ICONS } from "@solidx/excalidraw/icons";
 import "@solidx/excalidraw/style.css";
+// bring your own fonts: { Excalifont: [{ url, unicodeRange }], Nunito: … }
+import { fonts } from "./fonts";
 
 function Toolbar() {
   const tool = useTool();
@@ -18,7 +19,7 @@ function StrokeColor() {
   // stroke.value(), stroke.set("#1971c2"), stroke.enabled()
 }
 
-<Excalidraw>
+<Excalidraw fonts={fonts}>
   <Toolbar />
   <StrokeColor />
 </Excalidraw>`;

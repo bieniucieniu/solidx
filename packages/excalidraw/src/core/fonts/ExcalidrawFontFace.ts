@@ -1,18 +1,12 @@
 import { promiseTry, LOCAL_FONT_PROTOCOL } from "@excalidraw/common";
 
-import { subsetWoff2GlyphsByCodepoints } from "../subset/subset-main";
+import { toFontDataURL } from "./subset";
 
 type DataURL = string;
 
 export class ExcalidrawFontFace {
   public readonly urls: URL[] | DataURL[];
   public readonly fontFace: FontFace;
-
-  private static readonly ASSETS_FALLBACK_URL = `https://esm.sh/${
-    import.meta.env.PKG_NAME
-      ? `${import.meta.env.PKG_NAME}@${import.meta.env.PKG_VERSION}` // is provided during package build
-      : "@excalidraw/excalidraw" // fallback to the latest package version (i.e. for app)
-  }/dist/prod/`;
 
   constructor(family: string, uri: string, descriptors?: FontFaceDescriptors) {
     this.urls = ExcalidrawFontFace.createUrls(uri);
@@ -64,12 +58,7 @@ export class ExcalidrawFontFace {
 
       try {
         const arrayBuffer = await this.fetchFont(url);
-        const base64 = await subsetWoff2GlyphsByCodepoints(
-          arrayBuffer,
-          codePoints,
-        );
-
-        return base64;
+        return await toFontDataURL(arrayBuffer, codePoints);
       } catch (e) {
         errorMessages.push(`"${url.toString()}" returned error "${e}"`);
       }
@@ -83,7 +72,6 @@ export class ExcalidrawFontFace {
     );
 
     // in case of issues, at least return the last url as a content
-    // defaults to unpkg for bundled fonts (so that we don't have to host them forever) and http url for others
     return this.urls.length ? this.urls[this.urls.length - 1].toString() : "";
   }
 
@@ -146,36 +134,10 @@ export class ExcalidrawFontFace {
       return [new URL(uri)];
     }
 
-    // the port imports the font files through the host's bundler (Vite
-    // resolves `import x from "./x.woff2"` to a URL on the host's origin), so
-    // a root-relative uri is served by the host: use it as is, before the
-    // asset path / CDN fallbacks upstream relies on (which would not have
-    // the bundler's file names)
-    if (uri.startsWith("/") && typeof document !== "undefined") {
-      return [new URL(uri, document.baseURI)];
-    }
-    const urls: URL[] = [];
-
-    // absolute assets paths, which are found in tests and excalidraw-app build, won't work with base url, so we are stripping initial slash away
-    const assetUrl: string = uri.replace(/^\/+/, "");
-
-    if (typeof window.EXCALIDRAW_ASSET_PATH === "string") {
-      const normalizedBaseUrl = this.normalizeBaseUrl(
-        window.EXCALIDRAW_ASSET_PATH,
-      );
-
-      urls.push(new URL(assetUrl, normalizedBaseUrl));
-    } else if (Array.isArray(window.EXCALIDRAW_ASSET_PATH)) {
-      window.EXCALIDRAW_ASSET_PATH.forEach((path) => {
-        const normalizedBaseUrl = this.normalizeBaseUrl(path);
-        urls.push(new URL(assetUrl, normalizedBaseUrl));
-      });
-    }
-
-    // fallback url for bundled fonts
-    urls.push(new URL(assetUrl, ExcalidrawFontFace.ASSETS_FALLBACK_URL));
-
-    return urls;
+    // the host's url, resolved against the document (or the worker)
+    const base =
+      typeof document !== "undefined" ? document.baseURI : self.location.href;
+    return [new URL(uri, base)];
   }
 
   private static getFormat(url: URL | DataURL) {
@@ -195,24 +157,5 @@ export class ExcalidrawFontFace {
     } catch (error) {
       return "";
     }
-  }
-
-  private static normalizeBaseUrl(baseUrl: string) {
-    let result = baseUrl;
-
-    // in case user passed a root-relative url (~absolute path),
-    // like "/" or "/some/path", or relative (starts with "./"),
-    // prepend it with `location.origin`
-    if (/^\.?\//.test(result)) {
-      result = new URL(
-        result.replace(/^\.?\/+/, ""),
-        window?.location?.origin,
-      ).toString();
-    }
-
-    // ensure there is a trailing slash, otherwise url won't be correctly concatenated
-    result = `${result.replace(/\/+$/, "")}/`;
-
-    return result;
   }
 }

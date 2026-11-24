@@ -32,17 +32,9 @@ import type { ValueOf } from "@excalidraw/common/utility-types";
 
 import type { Scene } from "@excalidraw/element";
 
-import { CascadiaFontFaces } from "./Cascadia";
-import { ComicShannsFontFaces } from "./ComicShanns";
-import { EmojiFontFaces } from "./Emoji";
+import { LOCAL_FONT_PROTOCOL } from "@excalidraw/common";
+
 import { ExcalidrawFontFace } from "./ExcalidrawFontFace";
-import { ExcalifontFontFaces } from "./Excalifont";
-import { HelveticaFontFaces } from "./Helvetica";
-import { LiberationFontFaces } from "./Liberation";
-import { LilitaFontFaces } from "./Lilita";
-import { NunitoFontFaces } from "./Nunito";
-import { VirgilFontFaces } from "./Virgil";
-import { XiaolaiFontFaces } from "./Xiaolai";
 
 /** warned once per process, not per export (e.g. on a server) */
 let warnedNoFontFaceSet = false;
@@ -377,6 +369,33 @@ export class Fonts {
   }
 
   /**
+   * Registers the host's font files, per family (`Excalifont`, `Nunito`,
+   * `Xiaolai`, …). The package bundles none: a family nobody registered
+   * renders with its CSS fallbacks. The first registration of a family wins,
+   * since its faces are already in the document's font set.
+   */
+  public static registerFonts(fonts: ExcalidrawFonts) {
+    for (const [family, sources] of Object.entries(fonts)) {
+      if (!sources?.length) {
+        continue;
+      }
+      const fontFamily =
+        FONT_FAMILY[family as keyof typeof FONT_FAMILY] ??
+        FONT_FAMILY_FALLBACKS[family as keyof typeof FONT_FAMILY_FALLBACKS];
+      if (fontFamily === undefined) {
+        console.warn(`Excalidraw: unknown font family "${family}"`);
+        continue;
+      }
+      Fonts.register.call(
+        { registered: Fonts.registered },
+        family,
+        FONT_METADATA[fontFamily] ?? FONT_METADATA[FONT_FAMILY.Excalifont],
+        ...sources.map(({ url, ...descriptors }) => ({ uri: url, descriptors })),
+      );
+    }
+  }
+
+  /**
    * Register a new font.
    *
    * @param family font family
@@ -442,20 +461,12 @@ export class Fonts {
       Fonts.register.call(fonts, family, metadata, ...fontFacesDescriptors);
     };
 
-    init("Cascadia", ...CascadiaFontFaces);
-    init("Comic Shanns", ...ComicShannsFontFaces);
-    init("Excalifont", ...ExcalifontFontFaces);
-    // keeping for backwards compatibility reasons, uses system font (Helvetica on MacOS, Arial on Win)
-    init("Helvetica", ...HelveticaFontFaces);
-    // used for server-side pdf & png export instead of helvetica (technically does not need metrics, but kept in for consistency)
-    init("Liberation Sans", ...LiberationFontFaces);
-    init("Lilita One", ...LilitaFontFaces);
-    init("Nunito", ...NunitoFontFaces);
-    init("Virgil", ...VirgilFontFaces);
+    // only the system fonts; the host registers the files of the others
+    // (`registerFonts`, the `fonts` prop)
 
-    // fallback font faces
-    init(CJK_HAND_DRAWN_FALLBACK_FONT, ...XiaolaiFontFaces);
-    init(WINDOWS_EMOJI_FALLBACK_FONT, ...EmojiFontFaces);
+    // keeping for backwards compatibility reasons, uses system font (Helvetica on MacOS, Arial on Win)
+    init("Helvetica", { uri: LOCAL_FONT_PROTOCOL });
+    init(WINDOWS_EMOJI_FALLBACK_FONT, { uri: LOCAL_FONT_PROTOCOL });
 
     Fonts._initialized = true;
 
@@ -521,3 +532,20 @@ export interface ExcalidrawFontFaceDescriptor {
   uri: string;
   descriptors?: FontFaceDescriptors;
 }
+
+/** one font file of a family, e.g. one unicode-range subset */
+export type FontSource = {
+  /** the woff2 file: absolute, root-relative, or a data url */
+  url: string;
+  unicodeRange?: string;
+  weight?: string;
+  style?: string;
+};
+
+/** the host's font files per family */
+export type ExcalidrawFonts = Partial<
+  Record<
+    keyof typeof FONT_FAMILY | keyof typeof FONT_FAMILY_FALLBACKS,
+    readonly FontSource[]
+  >
+>;

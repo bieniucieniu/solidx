@@ -10,9 +10,11 @@ import {
 
 import App from "./components/App";
 import { mountCanvases } from "./components/canvases";
-import { defaultLang, languages, setLanguage } from "./i18n";
+import { Fonts } from "./fonts/Fonts";
+import { defaultLang, resolveLanguage, setLanguage } from "./i18n";
 import polyfill from "./polyfill";
 
+import type { ExcalidrawLocales } from "./i18n";
 import type { AppProps, ExcalidrawProps } from "./types";
 
 polyfill();
@@ -79,10 +81,15 @@ export const normalizeProps = (props: ExcalidrawProps): AppProps => {
   } as AppProps;
 };
 
-/** upstream `InitializeApp`: loads the language before the editor renders */
-export const loadLanguage = async (langCode: string = defaultLang.code) => {
-  const lang = languages.find((lang) => lang.code === langCode) || defaultLang;
-  await setLanguage(lang);
+/**
+ * upstream `InitializeApp`: loads the language before the editor renders.
+ * Languages other than English come from the host's `locales`.
+ */
+export const loadLanguage = async (
+  langCode: string = defaultLang.code,
+  locales?: ExcalidrawLocales,
+) => {
+  await setLanguage(resolveLanguage(langCode), locales?.[langCode]);
 };
 
 const CONTAINER_CLASSES = ["excalidraw", "excalidraw-container", "notranslate"];
@@ -100,6 +107,10 @@ export type ExcalidrawEditor = {
 };
 
 export const createEditor = (props: ExcalidrawProps): ExcalidrawEditor => {
+  // before the scene loads, so its text measures with the host's fonts
+  if (props.fonts) {
+    Fonts.registerFonts(props.fonts);
+  }
   const app = new App(normalizeProps(props));
 
   const mount = (container: HTMLDivElement, canvasHost?: HTMLElement) => {
@@ -203,6 +214,11 @@ export const createEditor = (props: ExcalidrawProps): ExcalidrawEditor => {
   return {
     app,
     mount,
-    setProps: (props) => app.setProps(normalizeProps(props)),
+    setProps: (props) => {
+      if (props.fonts) {
+        Fonts.registerFonts(props.fonts);
+      }
+      app.setProps(normalizeProps(props));
+    },
   };
 };
