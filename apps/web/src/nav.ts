@@ -1,4 +1,4 @@
-export type PackageId = "ui" | "m3" | "motion" | "xyflow" | "tiptap";
+export type PackageId = "ui" | "m3" | "motion" | "xyflow" | "tiptap" | "excalidraw";
 
 export type NavItem = {
   title: string;
@@ -42,6 +42,12 @@ export const packages: PackageNav[] = [
     title: "Tiptap",
     href: "/tiptap",
     description: "Basic, markdown, and menu editors.",
+  },
+  {
+    id: "excalidraw",
+    title: "Excalidraw",
+    href: "/excalidraw",
+    description: "A headless whiteboard: the editor, with your own UI on top.",
   },
 ];
 
@@ -146,6 +152,11 @@ export const sidebars: Record<PackageId, NavItem[]> = {
     { title: "Spring", href: "/motion/spring" },
     { title: "Presence", href: "/motion/presence" },
     { title: "List", href: "/motion/list" },
+  ],
+  excalidraw: [
+    { title: "Overview", href: "/excalidraw" },
+    { title: "UI chrome", href: "/excalidraw/ui" },
+    { title: "Material 3 chrome", href: "/excalidraw/m3" },
   ],
   xyflow: [
     { title: "Overview", href: "/xyflow" },

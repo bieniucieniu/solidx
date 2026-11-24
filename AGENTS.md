@@ -54,6 +54,8 @@ Packages, both with the same layout (`src/components/<area>`, `src/lib/<area>`, 
 - `packages/kit` (`@solidx/kit`) is the main package: the Solid 2.0 rewrite. Its ui-sdk and subpath rules are in [packages/kit/AGENTS.md](packages/kit/AGENTS.md).
 - `packages/1.9` (`@solidx/kit-1.9`) is the Solid 1.9 code, frozen. It feeds `apps/storybook` and the shadcn registry ([packages/1.9/README.md](packages/1.9/README.md)).
 
+`packages/excalidraw` (`@solidx/excalidraw`) is the Excalidraw editor ported to Solid 2.0, headless. `src/core` is vendored upstream code in upstream's style, excluded from `vp fmt` and `vp lint`; change it only as [packages/excalidraw/UPSTREAM.md](packages/excalidraw/UPSTREAM.md) describes. Its Solid layer (`src/solid`, `src/components`) follows the rules below.
+
 Apps (`.claude/launch.json` starts each by its package name):
 
 - `apps/web` (`web`) is the docs site, on Solid 2.0 and `@solidx/kit`.

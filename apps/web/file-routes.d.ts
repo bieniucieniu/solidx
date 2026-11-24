@@ -41,6 +41,30 @@ declare module "virtual:file-routes" {
       $$route: FileRouteEagerRef<Pick<typeof import("./src/routes/[...404]"), Extract<"route", keyof typeof import("./src/routes/[...404]")>>>;
     },
     {
+      path: "/excalidraw";
+      page: true;
+      $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw"), Extract<"default", keyof typeof import("./src/routes/excalidraw")>>>;
+      $$route?: undefined;
+    },
+    {
+      path: "/excalidraw/";
+      page: true;
+      $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw/index"), Extract<"default", keyof typeof import("./src/routes/excalidraw/index")>>>;
+      $$route?: undefined;
+    },
+    {
+      path: "/excalidraw/m3";
+      page: true;
+      $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw/m3"), Extract<"default", keyof typeof import("./src/routes/excalidraw/m3")>>>;
+      $$route?: undefined;
+    },
+    {
+      path: "/excalidraw/ui";
+      page: true;
+      $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw/ui"), Extract<"default", keyof typeof import("./src/routes/excalidraw/ui")>>>;
+      $$route?: undefined;
+    },
+    {
       path: "/";
       page: true;
       $component: FileRouteLazyRef<Pick<typeof import("./src/routes/index"), Extract<"default", keyof typeof import("./src/routes/index")>>>;
@@ -1607,6 +1631,39 @@ declare module "virtual:file-routes" {
           id: "/custom-nodes";
           page: true;
           $component: FileRouteLazyRef<Pick<typeof import("./src/routes/xyflow/custom-nodes"), Extract<"default", keyof typeof import("./src/routes/xyflow/custom-nodes")>>>;
+          $$route?: undefined;
+          children?: undefined;
+        }
+      ];
+    },
+    {
+      path: "/excalidraw";
+      id: "/excalidraw";
+      page: true;
+      $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw"), Extract<"default", keyof typeof import("./src/routes/excalidraw")>>>;
+      $$route?: undefined;
+      children: readonly [
+        {
+          path: "/";
+          id: "/";
+          page: true;
+          $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw/index"), Extract<"default", keyof typeof import("./src/routes/excalidraw/index")>>>;
+          $$route?: undefined;
+          children?: undefined;
+        },
+        {
+          path: "/m3";
+          id: "/m3";
+          page: true;
+          $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw/m3"), Extract<"default", keyof typeof import("./src/routes/excalidraw/m3")>>>;
+          $$route?: undefined;
+          children?: undefined;
+        },
+        {
+          path: "/ui";
+          id: "/ui";
+          page: true;
+          $component: FileRouteLazyRef<Pick<typeof import("./src/routes/excalidraw/ui"), Extract<"default", keyof typeof import("./src/routes/excalidraw/ui")>>>;
           $$route?: undefined;
           children?: undefined;
         }

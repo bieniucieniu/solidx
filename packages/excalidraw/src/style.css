@@ -1,0 +1,146 @@
+/*
+ * Structural styles for the headless editor, from upstream css/styles.scss,
+ * components/SVGLayer.scss and components/Tooltip.scss. Only what the canvas
+ * layers, the text editor and the canvas link tooltip need; UI styling is
+ * left to the host.
+ *
+ * Theming hooks:
+ * - `--color-selection` on `.excalidraw` sets the selection color.
+ * - `.excalidraw.theme--dark` is toggled by the editor.
+ */
+
+.excalidraw {
+  --zIndex-canvas: 1;
+  --zIndex-interactiveCanvas: 2;
+  --zIndex-svgLayer: 3;
+  --zIndex-wysiwyg: 3;
+  --zIndex-canvasButtons: 3;
+  --zIndex-layerUI: 4;
+  --zIndex-popup: 1001;
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /*
+   * prevents selecting text outside the editor when double-clicking or
+   * dragging on the canvas
+   */
+  user-select: none;
+}
+
+.excalidraw:focus {
+  outline: none;
+}
+
+.excalidraw canvas {
+  touch-action: none;
+  /* improves blurriness at certain devicePixelRatios */
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  z-index: var(--zIndex-canvas);
+}
+
+.excalidraw canvas.interactive {
+  z-index: var(--zIndex-interactiveCanvas);
+}
+
+.excalidraw__canvas-wrapper,
+.excalidraw__canvas.static {
+  pointer-events: none;
+}
+
+.excalidraw__canvas {
+  position: absolute;
+}
+
+/* the box the canvas layers are mounted in; covers the editor */
+.excalidraw__canvases {
+  position: absolute;
+  inset: 0;
+}
+
+/*
+ * The host's UI (`<Excalidraw>`'s children), over the canvas layers. It lets
+ * pointer events through to the canvas; give interactive panels
+ * `pointer-events: auto`.
+ */
+.excalidraw__ui {
+  position: absolute;
+  inset: 0;
+  z-index: var(--zIndex-layerUI);
+  pointer-events: none;
+}
+
+/*
+ * The text editor's box: the canvas area, clipped. A caret outside it is
+ * revealed by scrolling this box, which the text editor turns into a pan.
+ */
+.excalidraw .excalidraw-textEditorContainer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.excalidraw .excalidraw-textEditorContainer > textarea {
+  pointer-events: auto;
+}
+
+.excalidraw__embeddable {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.excalidraw__embeddable-container {
+  position: absolute;
+  z-index: 2;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+/* laser, lasso, eraser and draw-shape trails */
+.excalidraw .SVGLayer {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--zIndex-svgLayer);
+}
+
+.excalidraw .SVGLayer svg {
+  image-rendering: auto;
+  overflow: visible;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* the canvas link tooltip, appended to the document body */
+.excalidraw-tooltip {
+  position: fixed;
+  z-index: 1001;
+  padding: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  pointer-events: none;
+  word-wrap: break-word;
+  background: #000;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  display: none;
+}
+
+.excalidraw-tooltip.excalidraw-tooltip--visible {
+  display: block;
+}

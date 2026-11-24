@@ -1,11 +1,12 @@
 import { render } from "@solidjs/web";
 import { For, Match, Switch, createSignal, onSettled } from "solid-js";
 import "./app.css";
+import { ExcalidrawPage } from "./pages/excalidraw";
 import { M3Page } from "./pages/m3";
 import { MotionPage, TiptapPage, XyflowPage } from "./pages/others";
 import { UiPage } from "./pages/ui";
 
-const pages = ["ui", "m3", "motion", "xyflow", "tiptap"] as const;
+const pages = ["ui", "m3", "motion", "xyflow", "tiptap", "excalidraw"] as const;
 type Page = (typeof pages)[number];
 
 function readHash(): Page {
@@ -53,6 +54,9 @@ function App() {
           <Switch>
             <Match when={page() === "ui"}>
               <UiPage />
+            </Match>
+            <Match when={page() === "excalidraw"}>
+              <ExcalidrawPage />
             </Match>
             <Match when={page() === "m3"}>
               <M3Page />

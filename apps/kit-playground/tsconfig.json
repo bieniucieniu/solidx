@@ -14,7 +14,9 @@
     "noEmit": true,
     "isolatedModules": true,
     "paths": {
-      "#kit/*": ["../../packages/kit/src/*"]
+      "#kit/*": ["../../packages/kit/src/*"],
+      "#ex/*": ["../../packages/excalidraw/src/*"],
+      "@excalidraw/excalidraw/*": ["../../packages/excalidraw/src/core/*"]
     }
   },
   "include": ["src"]
