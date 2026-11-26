@@ -20,7 +20,7 @@ export function NavigationBar(props: NavigationBarProps) {
       data-layout={props.layout ?? "stacked"}
       {...rest}
       class={cn(
-        "group/navigation-bar flex h-16 w-full items-stretch justify-center bg-surface-container text-on-surface-variant data-[layout=inline]:items-center data-[layout=inline]:justify-around",
+        "group/navigation-bar flex data-[layout=inline]:h-16 w-full items-stretch justify-center bg-surface-container text-on-surface-variant data-[layout=inline]:items-center data-[layout=inline]:justify-around",
         props.class,
       )}
     />
