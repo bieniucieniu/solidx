@@ -38,11 +38,19 @@ export function NavigationRail(props: NavigationRailProps) {
 }
 
 /** Top area for a menu button and a FAB or extended FAB. */
-export function NavigationRailHeader(props: JSX.HTMLAttributes<HTMLDivElement>) {
+export function NavigationRailHeader(
+  props: JSX.HTMLAttributes<HTMLDivElement> &
+    Pick<JSX.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
+      as?: ValidComponent;
+    },
+) {
+  const rest = omit(props, "as");
+  const Tag = dynamic(() => props.as ?? "div");
+
   return (
-    <div
+    <Tag
       data-slot="navigation-rail-header"
-      {...props}
+      {...rest}
       class={cn(
         "-mt-5 mb-10 flex flex-col items-center gap-1 group-data-expanded/navigation-rail:items-start",
         props.class,
