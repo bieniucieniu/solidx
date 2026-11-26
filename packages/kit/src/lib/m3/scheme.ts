@@ -79,9 +79,22 @@ const roles = {
   "on-tertiary-fixed-variant": "onTertiaryFixedVariant",
 } as const satisfies Record<string, keyof DynamicScheme>;
 
-/** The scheme's colors as `--md-sys-color-*` custom properties (hex values). */
-export async function createScheme(options: SchemeOptions): Promise<Record<string, string>> {
-  const utilities = await loadUtilities();
+/** `--md-sys-color-*` custom property name → hex value. */
+export type SchemeVars = Record<string, string>;
+
+/** The `@material/material-color-utilities` module. */
+export type ColorUtilities = typeof import("@material/material-color-utilities");
+
+export interface SchemeSelectors {
+  light: string;
+  dark: string;
+}
+
+/**
+ * The scheme's colors as `--md-sys-color-*` custom properties (hex values), from an already
+ * loaded color-utilities module. Synchronous, so build tools can call it (see `@solidx/kit/vite`).
+ */
+export function buildScheme(utilities: ColorUtilities, options: SchemeOptions): SchemeVars {
   const schemes = {
     "tonal-spot": utilities.SchemeTonalSpot,
     vibrant: utilities.SchemeVibrant,
@@ -98,34 +111,62 @@ export async function createScheme(options: SchemeOptions): Promise<Record<strin
     options.contrast ?? 0,
     options.specVersion ?? "2025",
   );
-  const vars: Record<string, string> = {};
+  const vars: SchemeVars = {};
   for (const [role, getter] of Object.entries(roles)) {
     vars[`--md-sys-color-${role}`] = utilities.hexFromArgb(scheme[getter] as number);
   }
   return vars;
 }
 
+/** The scheme's colors as `--md-sys-color-*` custom properties (hex values). */
+export async function createScheme(options: SchemeOptions): Promise<SchemeVars> {
+  return buildScheme(await loadUtilities(), options);
+}
+
 /**
  * Sets the scheme on an element (for example `document.documentElement`, or a `[data-m3]`
  * wrapper to theme one region). Resolves to a function that removes the properties again.
+ *
+ * Takes either options, or vars that are already computed (for example `light` / `dark` from
+ * `virtual:m3-scheme`). Vars apply without loading color-utilities.
  */
 export async function applyScheme(
   element: HTMLElement,
-  options: SchemeOptions,
+  scheme: SchemeOptions | SchemeVars,
 ): Promise<() => void> {
-  const vars = await createScheme(options);
+  const vars = isOptions(scheme) ? await createScheme(scheme) : scheme;
   for (const [name, value] of Object.entries(vars)) element.style.setProperty(name, value);
   return () => {
     for (const name of Object.keys(vars)) element.style.removeProperty(name);
   };
 }
 
-/** A stylesheet with the light scheme on `:root` and the dark scheme on `.dark`. */
-export async function schemeCss(options: Omit<SchemeOptions, "dark">): Promise<string> {
-  const block = async (selector: string, dark: boolean) => {
-    const vars = await createScheme({ ...options, dark });
+function isOptions(scheme: SchemeOptions | SchemeVars): scheme is SchemeOptions {
+  return typeof scheme.seed === "string";
+}
+
+/** A stylesheet with the light vars on `selectors.light` and the dark vars on `selectors.dark`. */
+export function schemeCssFrom(
+  light: SchemeVars,
+  dark: SchemeVars,
+  selectors: SchemeSelectors = { light: ":root", dark: ".dark" },
+): string {
+  const block = (selector: string, vars: SchemeVars) => {
     const lines = Object.entries(vars).map(([name, value]) => `  ${name}: ${value};`);
     return `${selector} {\n${lines.join("\n")}\n}`;
   };
-  return `${await block(":root", false)}\n\n${await block(".dark", true)}\n`;
+  return `${block(selectors.light, light)}\n\n${block(selectors.dark, dark)}\n`;
+}
+
+/** A stylesheet with the light scheme on `:root` and the dark scheme on `.dark`. */
+export async function schemeCss(
+  options: Omit<SchemeOptions, "dark">,
+  selectors?: SchemeSelectors,
+): Promise<string> {
+  const utilities = await loadUtilities();
+  return schemeCssFrom(
+    buildScheme(utilities, { ...options, dark: false }),
+    buildScheme(utilities, { ...options, dark: true }),
+    selectors,
+  );
 }
