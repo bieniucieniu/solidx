@@ -8,7 +8,7 @@ import { defineConfig } from "vite-plus";
 export default defineConfig({
   plugins: [
     // Generates the default M3 color tokens from a seed at build time (virtual:m3-scheme.css).
-    m3Scheme({ seed: "#6750A4", variant: "tonal-spot" }),
+    m3Scheme({ seed: "#7D5260", variant: "fidelity" }),
     tailwindcss(),
     // Solid 2 start mode (the SolidStart successor): streaming SSR around src/App.tsx, wrapped
     // in src/Document.tsx. `vite build` writes client assets to dist/client and the request
