@@ -31,6 +31,18 @@ export default defineConfig({
       },
       outputOptions: { dir: "dist" },
     },
+    {
+      // The m3Scheme plugin runs in Node, next to the app's Vite config.
+      format: ["esm"],
+      dts: true,
+      unbundle: true,
+      deps: {
+        neverBundle: [/^[^./#]/],
+      },
+      platform: "node",
+      entry: { vite: "src/vite/m3-scheme.ts" },
+      outputOptions: { dir: "dist" },
+    },
   ],
   test: {
     environment: "node",

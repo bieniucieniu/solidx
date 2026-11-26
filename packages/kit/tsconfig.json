@@ -13,6 +13,7 @@
     "skipLibCheck": true,
     "declaration": true,
     "isolatedModules": true,
+    "rewriteRelativeImportExtensions": true,
     "paths": {
       "#kit/*": ["./src/*"]
     }
