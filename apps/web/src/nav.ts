@@ -43,12 +43,12 @@ export const packages: PackageNav[] = [
     href: "/tiptap",
     description: "Basic, markdown, and menu editors.",
   },
-  {
-    id: "excalidraw",
-    title: "Excalidraw",
-    href: "/excalidraw",
-    description: "A headless whiteboard: the editor, with your own UI on top.",
-  },
+  // {
+  //   id: "excalidraw",
+  //   title: "Excalidraw",
+  //   href: "/excalidraw",
+  //   description: "A headless whiteboard: the editor, with your own UI on top.",
+  // },
 ];
 
 export const sidebars: Record<PackageId, NavItem[]> = {
