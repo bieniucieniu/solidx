@@ -2,6 +2,8 @@ import { Loading } from "solid-js";
 import { Header, PackageNavigationBar, PackageNavigationRail } from "~/components/nav";
 import { Router } from "./router";
 import "./app.css";
+// The build-time M3 scheme from the m3Scheme plugin (vite.config.ts) over the tokens.css defaults.
+import "virtual:m3-scheme.css";
 
 export default function App() {
   return (

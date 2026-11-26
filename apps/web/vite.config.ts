@@ -1,4 +1,5 @@
 import solid from "@solidjs/vite-plugin";
+import { m3Scheme } from "@solidx/kit/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { fileRoutes } from "filesystem-routing/vite";
 import { prerender } from "prerender-crawler/vite";
@@ -6,6 +7,8 @@ import { defineConfig } from "vite-plus";
 
 export default defineConfig({
   plugins: [
+    // Generates the default M3 color tokens from a seed at build time (virtual:m3-scheme.css).
+    m3Scheme({ seed: "#6750A4", variant: "tonal-spot" }),
     tailwindcss(),
     // Solid 2 start mode (the SolidStart successor): streaming SSR around src/App.tsx, wrapped
     // in src/Document.tsx. `vite build` writes client assets to dist/client and the request

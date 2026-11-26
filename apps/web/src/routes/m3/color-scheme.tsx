@@ -8,7 +8,15 @@ const snippet = `import { applyScheme, createScheme, schemeCss } from "@solidx/k
 const remove = await applyScheme(document.documentElement, { seed: "#006A6A", dark: false });
 
 // Or print a stylesheet to paste over the baseline values in theme.css.
-console.log(await schemeCss({ seed: "#006A6A", variant: "vibrant" }));`;
+console.log(await schemeCss({ seed: "#006A6A", variant: "vibrant" }));
+
+// Or generate the default tokens at build time. vite.config.ts:
+//   import { m3Scheme } from "@solidx/kit/vite";
+//   plugins: [m3Scheme({ seed: "#006A6A", variant: "vibrant" }), tailwindcss(), …]
+// Then import "virtual:m3-scheme.css" from the entry (or set outFile and @import it from CSS).
+// The vars are also importable, and apply without loading color-utilities:
+import { dark } from "virtual:m3-scheme";
+await applyScheme(document.documentElement, dark);`;
 
 export default function ColorSchemePage() {
   return (
