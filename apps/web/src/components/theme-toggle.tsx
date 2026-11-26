@@ -83,12 +83,15 @@ if (isBrowser) {
   });
 }
 
-export function ThemeToggle() {
+export function ThemeToggle(props: { class?: string }) {
   // The server can't know the theme, so the markup must not depend on it (hydration would
   // fail). Both icons render and the `.dark` class on <html> picks one, from the first paint.
   return (
     <Menu>
-      <MenuTrigger aria-label="Change theme" class={iconButtonVariants({ size: "sm" })}>
+      <MenuTrigger
+        aria-label="Change theme"
+        class={iconButtonVariants({ size: "sm", class: props.class })}
+      >
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
             class="dark:hidden"
